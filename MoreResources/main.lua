@@ -89,6 +89,6 @@ end
 local loader = ReLoad.auto_single()
 
 -- this runs only when ModUtil and the game's lua is ready
-ModUtil.on_ready_final(function()
+ModUtil.once_loaded.game(function()
 	loader.load(on_ready, on_reload)
 end)
