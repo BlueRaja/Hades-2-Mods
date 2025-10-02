@@ -147,7 +147,7 @@ local function isMultiplierEnabled(source)
 end
 
 function patch_AddResource(base, name, amount, source, args)
-    printMsg("AddResource(%s,%d,%s)", name, amount, source)
+    -- printMsg("AddResource(%s,%d,%s)", name, amount, source)
     local category = getResourceCategory(name)
     if category then
         local multiplier = Config.ResourceMultipliers[category] or 1
