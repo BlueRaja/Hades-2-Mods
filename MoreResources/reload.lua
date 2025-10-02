@@ -5,14 +5,6 @@
 -- this file will be reloaded if it changes during gameplay,
 -- 	so only assign to values or define things here.
 
--- local function getRewardCount(config, rewardType, lootName)
---     local v = config[rewardType] or config["Others"]
---     if type(v) == "table" then
---         v = v[lootName] or v["Others"]
---     end
---     return v or 1
--- end
-
 local resourceTypes = {
     Plants = {
         "PlantFMoly",          -- Moly
