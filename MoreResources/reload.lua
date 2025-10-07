@@ -22,7 +22,7 @@ local resourceTypes = {
         "PlantNGarlic",        -- Garlic
         "PlantOMandrake",      -- Mandrake
         "PlantPOlive",         -- Olive
-        "PlantQSnakereed",     -- Snake-reed
+        "PlantQSnakereed",     -- Plankton
         "PlantChaosThalamus",  -- Thalamus
     },
     PlantSeeds = {
