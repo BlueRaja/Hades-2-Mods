@@ -1,7 +1,7 @@
 {
   "namespace": "BlueRaja",
-  "name": "NewIncantations",
-  "description": "Adds new incantations to the game",
+  "name": "FavorOfTheGods",
+  "description": "Adds 20+ new incantations that are based on your relationship with the gods",
   "version_number": "1.0.0",
   "dependencies": [
     "Hell2Modding-Hell2Modding-1.0.63",
@@ -14,5 +14,5 @@
     "BlueRaja-IncantationsAPI-1.0.0"
   ],
   "website_url": "https://github.com/BlueRaja/Hades-2-Mods",
-  "FullName": "BlueRaja-NewIncantations"
+  "FullName": "BlueRaja-FavorOfTheGods"
 }
