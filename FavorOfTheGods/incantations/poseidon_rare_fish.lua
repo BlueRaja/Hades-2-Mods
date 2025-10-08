@@ -16,7 +16,7 @@ end
 Incantations.addIncantation({
     Id = "BlueRaja-Poseidon-Rare-Fish",
     Name = "Favor of Poseidon",
-    Description = "Increased chance of catching rare fish",
+    Description = "Increased chance of catching rare fish.",
     FlavorText = "Poseidon's blessing guides your hook to magnificent catches, ensuring the sea's finest treasures find their way to you.",
     OnEnabled = enhanceRareFishChances,
     WorldUpgradeData = {
