@@ -10,6 +10,7 @@ Incantations.addIncantation({
     Name = "Favor of Selene",
     Description = "Increases the number of hex upgrades you get from Path of Stars boons",
     FlavorText = "Selene's blessing illuminates the Path of Stars, revealing additional celestial bodies.",
+    OnEnabled = increaseSpellUpgradeChoices,
     WorldUpgradeData = {
         InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Selene",
@@ -32,6 +33,5 @@ Incantations.addIncantation({
         RevealReactionVoiceLines = {
             { GlobalVoiceLines = "CauldronReactionVoiceLines" },
         },
-        OnEnabled = increaseSpellUpgradeChoices,
     }
 })
