@@ -1,0 +1,15 @@
+{
+  "namespace": "BlueRaja",
+  "name": "IncantationsAPI",
+  "description": "Developer library for adding new incantations",
+  "version_number": "1.0.0",
+  "dependencies": [
+    "Hell2Modding-Hell2Modding-1.0.63",
+    "LuaENVY-ENVY-1.2.0",
+    "SGG_Modding-ENVY-1.2.0",
+    "SGG_Modding-ModUtil-4.0.1",
+    "SGG_Modding-SJSON-1.0.0"
+  ],
+  "website_url": "https://github.com/BlueRaja/Hades-2-Mods",
+  "FullName": "BlueRaja-IncantationsAPI"
+}
