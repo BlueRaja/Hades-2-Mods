@@ -11,7 +11,7 @@
 function roundRandomly(roundMe)
     local floor = math.floor(roundMe)
     local fractionalPart = roundMe - floor
-    if fractionalPart > 0 and fractionalPart > math.random() then
+    if fractionalPart > 0 and RandomChance(fractionalPart) then
         return floor + 1
     else
         return floor
@@ -21,3 +21,5 @@ end
 import "incantations/demeter_more_plants.lua"
 import "incantations/hephaestus_more_ore.lua"
 import "incantations/narcissus_max_hp.lua"
+import "incantations/dora_shade_damage.lua"
+import "incantations/aphrodite_nectar_refund.lua"

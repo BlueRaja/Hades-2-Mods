@@ -45,8 +45,5 @@ Incantations.addIncantation({
                 { Cue = "/VO/Melinoe_5486", Text = "...Perfect." },
             },
         },
-        RevealReactionVoiceLines = {
-            { GlobalVoiceLines = "CauldronReactionVoiceLines" },
-        },
     }
 })
