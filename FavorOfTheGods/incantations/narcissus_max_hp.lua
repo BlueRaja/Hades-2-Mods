@@ -27,6 +27,7 @@ Incantations.addIncantation({
             GiftPoints = 6,        -- Nectar
             GiftPointsRare = 4,    -- Bath Salts
             SuperGiftPoints = 2,   -- Ambrosia
+            Mixer5Common = 1,      -- Star Dust
         },
         GameStateRequirements = {
             {   -- Three hearts with Narcissus
