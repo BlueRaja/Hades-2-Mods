@@ -29,9 +29,9 @@ Incantations.addIncantation({
         InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Heracles",
         Cost = {
-            OreBronze = 5,           -- Bronze
-            OreIron = 5,             -- Iron  
-            PlantFEagle = 2,         -- Eagle's Feather
+            OreNBronze = 5,         -- Bronze
+            OreOIron = 5,           -- Iron  
+            MixerPBoss = 2,         -- Eagle's Feather
         },
         GameStateRequirements = {
             {   -- Three hearts with Heracles
@@ -57,8 +57,8 @@ Incantations.addIncantation({
         InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Nemesis",
         Cost = {
-            OreGlassrock = 5,        -- Glassrock
-            OreMarble = 5,           -- Marble
+            OreHGlassrock = 5,       -- Glassrock
+            OreIMarble = 5,          -- Marble
             MixerHBoss = 2,          -- Tears
         },
         GameStateRequirements = {
