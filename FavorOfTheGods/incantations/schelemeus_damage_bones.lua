@@ -54,7 +54,7 @@ Incantations.addIncantation({
         },
         GameStateRequirements = {
             {   -- Five hearts with Schelemeus
-                PathTrue = { "GameState", "TextLinesRecord", "SchelemeusGift05" },
+                PathTrue = { "GameState", "TextLinesRecord", "SkellyGift05" },
             },
         },
         IncantationVoiceLines = {

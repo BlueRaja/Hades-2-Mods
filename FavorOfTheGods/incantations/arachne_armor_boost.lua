@@ -42,7 +42,7 @@ Incantations.addIncantation({
                 PathTrue = { "GameState", "TextLinesRecord", "ArachneGift03" },
             },
             {   -- Unlocked the upper staircase to Olympus
-                PathTrue = { "CurrentRun", "RoomsEntered", "N_Hub" },
+                PathTrue = { "GameState", "WorldUpgradesAdded", "WorldUpgradeAltRunDoor" }
             },
         },
         IncantationVoiceLines = {
