@@ -30,7 +30,7 @@ ModUtil.mod.Path.Wrap("LeaveRoomPresentation", function(base, currentRun, exitDo
         local totalBonesEarnedCurrentRoom = math.floor(currentDamage / damagePerBone)
         local bonesToAdd = totalBonesEarnedCurrentRoom - totalBonesEarnedLastRoom
         
-        if bonesEarned > 0 then
+        if bonesToAdd > 0 then
             AddResource("MetaCurrency", bonesEarned, "BlueRajaSchelemeusDamage")
         end
         

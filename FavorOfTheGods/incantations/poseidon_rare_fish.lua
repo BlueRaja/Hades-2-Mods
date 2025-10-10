@@ -50,6 +50,6 @@ Incantations.addIncantation({
                 PreLineWait = 0.3,
                 { Cue = "/VO/MelinoeField_3153", Text = "Enjoy Poseidon's depths." }
             },
-        }
+        },
     },
 })

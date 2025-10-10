@@ -20,7 +20,7 @@ local function enableOlympusThirdHammer()
         if requirement.Path and 
            requirement.Path[1] == "CurrentRun" and 
            requirement.Path[2] == "LootTypeHistory" and 
-           requirement.Path[3] == "WeaponUpgrade" and
+           requirement.Path[3] == "WeaponUpgrade" then
             NamedRequirementsData.LateHammerLootRequirements[i] = {
                 Path = { "CurrentRun", "LootTypeHistory", "WeaponUpgrade" },
                 Comparison = "<",
