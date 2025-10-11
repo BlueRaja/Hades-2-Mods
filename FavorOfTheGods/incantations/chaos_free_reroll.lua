@@ -70,7 +70,7 @@ end)
 Incantations.addIncantation({
     Id = "BlueRaja-Chaos-Free-Reroll",
     Name = "Favor of Chaos",
-    Description = "Get one free reroll the first time you encounter each god during a run.",
+    Description = "Get {#Emph}one free temporary {!Icons.ReRollAlt} {#Prev}the first time you encounter each {#Emph}god {#Prev}during a run.",
     FlavorText = "Chaos's blessing foregoes order for entropy, allowing you to reshape fate itself.",
     WorldUpgradeData = {
         InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },

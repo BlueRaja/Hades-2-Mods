@@ -19,7 +19,7 @@ end
 Incantations.addIncantation({
     Id = "BlueRaja-God-Encounter-Boosts",
     Name = "Favor of Artemis",
-    Description = "Artemis is more likely to appear and help during your runs.",
+    Description = "{#Emph}Artemis {#Prev}is more likely to appear and help during your runs.",
     FlavorText = "Artemis's blessing ensures her presence when you need it most, guiding your arrows and providing divine assistance in battle.",
     OnEnabled = enableArtemisEncounterBoost,
     WorldUpgradeData = {
@@ -50,7 +50,7 @@ Incantations.addIncantation({
 Incantations.addIncantation({
     Id = "BlueRaja-Icarus-Encounter-Boost",
     Name = "Favor of Icarus",
-    Description = "Icarus is more likely to appear and help during your runs.",
+    Description = "{#Emph}Icarus {#Prev}is more likely to appear and help during your runs.",
     FlavorText = "Icarus's blessing grants you the wings of opportunity, ensuring his aid when you need to soar above your challenges.",
     OnEnabled = enableIcarusEncounterBoost,
     WorldUpgradeData = {
@@ -81,7 +81,7 @@ Incantations.addIncantation({
 Incantations.addIncantation({
     Id = "BlueRaja-Athena-Encounter-Boost",
     Name = "Favor of Athena",
-    Description = "Athena is more likely to appear and help during your runs.",
+    Description = "{#Emph}Athena {#Prev}is more likely to appear and help during your runs.",
     FlavorText = "Athena's blessing ensures her strategic presence when you need wisdom most, providing divine guidance in your most challenging moments.",
     OnEnabled = enableAthenaEncounterBoost,
     WorldUpgradeData = {

@@ -60,7 +60,7 @@ end)
 Incantations.addIncantation({
     Id = "BlueRaja-Echo-Shop-Respawn",
     Name = "Favor of Echo",
-    Description = "The first item purchased at Charon's shop spawns a second item.",
+    Description = "The first item purchased at {$Keywords.WellShop} spawns a second item.",
     FlavorText = "Echo's blessing resonates through Charon's shop, causing the god's gifts to reverberate and manifest anew.",
     OnEnabled = enableEchoShopRespawn,
     WorldUpgradeData = {

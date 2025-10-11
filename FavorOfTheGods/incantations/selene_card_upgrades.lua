@@ -9,7 +9,7 @@ end
 Incantations.addIncantation({
     Id = "BlueRaja-Selene-Card-Upgrades",
     Name = "Favor of Selene",
-    Description = "Increases the number of hex upgrades you get from Path of Stars boons",
+    Description = "Increases the {#Emph}number of {!Icons.TalentDrop} {#Prev}you get from Path of Stars boons",
     FlavorText = "Selene's blessing illuminates the Path of Stars, revealing additional celestial bodies.",
     OnEnabled = increaseSpellUpgradeChoices,
     WorldUpgradeData = {

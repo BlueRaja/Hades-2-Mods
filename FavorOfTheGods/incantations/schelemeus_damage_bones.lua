@@ -43,7 +43,7 @@ end)
 Incantations.addIncantation({
     Id = "BlueRaja-Schelemeus-Damage-Bones",
     Name = "Favor of Schelemeus",
-    Description = "Gain"..bonesPerBag.." bones for every "..damagePerBoneBag.." damage dealt.",
+    Description = "{#Emph}Gain "..bonesPerBag.." {#Prev}{!Icons.MetaCurrency} for every "..damagePerBoneBag.." damage dealt.",
     FlavorText = "Every strike you land earns you rewards, young one. The more you {#Emph}pain{#Prev}, the more you gain!",
     WorldUpgradeData = {
         InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },

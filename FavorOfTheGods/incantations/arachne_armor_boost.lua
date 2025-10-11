@@ -26,7 +26,7 @@ end
 Incantations.addIncantation({
     Id = "BlueRaja-Arachne-Armor-Boost",
     Name = "Favor of Arachne",
-    Description = "Costumes woven by Arachne have +" .. armorBonus .. " {!Icons.ArmorTotal}.",
+    Description = "{#Emph}Costumes {#Prev}woven by {$Keywords.CharArachne} have +" .. armorBonus .. " {!Icons.ArmorTotal}.",
     FlavorText = "Arachne's blessing weaves additional protection into her silken gifts, ensuring her outfits provide even greater defense against the dangers ahead.",
     OnEnabled = increaseArachneArmor,
     WorldUpgradeData = {

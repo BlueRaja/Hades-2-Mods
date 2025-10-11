@@ -26,7 +26,7 @@ end
 Incantations.addIncantation({
     Id = "BlueRaja-Charon-Gold-Drops",
     Name = "Favor of Charon",
-    Description = "Enemies are more likely to drop gold when defeated.",
+    Description = "{#Emph}Enemies {#Prev}are more likely to {#Emph}drop {!Icons.Money} {#Prev}when defeated.",
     FlavorText = "Charon's blessing ensures that the fallen leave behind their worldly wealth, enriching your journey through the underworld.",
     OnEnabled = enableCharonGoldDrops,
     WorldUpgradeData = {

@@ -27,7 +27,7 @@ end)
 Incantations.addIncantation({
     Id = "BlueRaja-Heracles-Challenge-Reward",
     Name = "Favor of Heracles",
-    Description = "Increases the money reward from Heracles's challenges by 50%.",
+    Description = "Increases the {!Icons.Money} reward from {#Emph}Heracles's challenges {#Prev}by 50%.",
     FlavorText = "Heracles's blessing ensures that those who prove their strength in his trials are rewarded with greater riches, honoring the tradition of heroic deeds.",
     WorldUpgradeData = {
         InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
@@ -55,7 +55,7 @@ Incantations.addIncantation({
 Incantations.addIncantation({
     Id = "BlueRaja-Nemesis-Challenge-Reward", 
     Name = "Favor of Nemesis",
-    Description = "Increases the money reward from Nemesis's challenges by 50%.",
+    Description = "Increases the {!Icons.Money} reward from {#Emph}Nemesis's challenges {#Prev}by 50%.",
     FlavorText = "Nemesis's blessing ensures that those who face her trials of retribution are rewarded with greater wealth, as justice demands proper compensation for the worthy.",
     WorldUpgradeData = {
         InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },

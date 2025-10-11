@@ -20,7 +20,7 @@ end)
 Incantations.addIncantation({
     Id = "BlueRaja-Dionysus-Nectar-Chance",
     Name = "Favor of Dionysus",
-    Description = "5% chance to gain free nectar when picking up resources during a run.",
+    Description = "5% chance to {#Emph}gain free {!Icons.GiftPoints} {#Prev}when picking up resources during a run.",
     FlavorText = "With Dionysus's favor, the pleasures of the world may indulge you at any moment.",
     WorldUpgradeData = {
         InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },

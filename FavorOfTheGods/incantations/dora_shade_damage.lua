@@ -18,7 +18,7 @@ end
 Incantations.addIncantation({
     Id = "BlueRaja-Dora-Shade-Damage",
     Name = "Favor of Dora",
-    Description = "Shades deal 50% more damage when attacking enemies.",
+    Description = "{$Keywords.ShadeMerc} deal {#Emph}50% more damage {#Prev}when attacking enemies.",
     FlavorText = "Dora's blessing strengthens the bonds between the living and the dead, empowering the shades that fight alongside you.",
     OnEnabled = enableDoraShadeDamage,
     WorldUpgradeData = {

@@ -22,7 +22,7 @@ end
 Incantations.addIncantation({
     Id = "BlueRaja-Eris-Sell-Rubbish",
     Name = "Recycling Center",
-    Description = "Allow rubbish to be sold for bones.",
+    Description = "Allow {!Icons.TrashPoints} to be sold for {!Icons.MetaCurrency}.",
     FlavorText = "One woman's trash is another woman's treasure.",
     OnEnabled = allowRubbishToBeSold,
     WorldUpgradeData = {

@@ -36,7 +36,7 @@ end
 Incantations.addIncantation({
     Id = "BlueRaja-Olympus-Third-Hammer",
     Name = "Favor of Olympus",
-    Description = "Allows you to sometimes find a third Daedalus Hammer.",
+    Description = "Allows you to sometimes find {#Emph}a third {!Icons.Hammer}{#Prev}.",
     FlavorText = "The collective blessing of Olympus grants you access to the master craftsman's tools beyond their usual limits, allowing for unprecedented weapon enhancement.",
     OnEnabled = enableOlympusThirdHammer,
     WorldUpgradeData = {

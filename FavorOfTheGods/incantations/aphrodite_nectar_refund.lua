@@ -34,7 +34,7 @@ end)
 Incantations.addIncantation({
     Id = "BlueRaja-Aphrodite-Nectar-Refund",
     Name = "Favor of Aphrodite",
-    Description = "25% chance to get Nectar back when spending it on relationships.",
+    Description = "{#Emph}25% chance {#Prev} to get {!Icons.GiftPoints} back when spending it on relationships.",
     FlavorText = "Aphrodite's blessing ensures that love is never wasted, proliferating tokens of affection to those who give freely from their hearts.",
     WorldUpgradeData = {
         InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },

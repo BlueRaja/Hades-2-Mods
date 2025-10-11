@@ -48,7 +48,7 @@ end)
 Incantations.addIncantation({
     Id = "BlueRaja-Narcissus-Max-HP",
     Name = "Favor of Narcissus",
-    Description = "Gain 1 max HP whenever you leave a room without taking damage.",
+    Description = "{#Emph}Gain 1 {!Icons.HealthUp} {#Prev}whenever you leave a room without taking damage.",
     FlavorText = "Narcissus rewards those who maintain their beauty and grace, granting youthful exuberance to those who emerge unscathed from battle.",
     WorldUpgradeData = {
         InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },

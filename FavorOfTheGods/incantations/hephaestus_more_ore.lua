@@ -29,7 +29,7 @@ end)
 Incantations.addIncantation({
     Id = "BlueRaja-Hephaestus-More-Ore-1",
     Name = "Favor of Hephaestus",
-    Description = "Gain a 25% chance to extract an additional ore whenever you mine one.",
+    Description = "Gain a 25% chance to {#Emph}extract an additional ore {#Prev}whenever you mine one.",
     FlavorText = "Hephaestus's blessing compels the stone to yield its hidden veins, rewarding those who strike the earth with strength and resolve.",
     WorldUpgradeData = {
         InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
@@ -71,7 +71,7 @@ Incantations.addIncantation({
 Incantations.addIncantation({
     Id = "BlueRaja-Hephaestus-More-Ore-2",
     Name = "Greater Favor of Hephaestus",
-    Description = "Increase the chance to harvest an additional ore to 50%.",
+    Description = "Increase the chance to {#Emph}harvest an additional ore {#Prev}to 50%.",
     FlavorText = "With Hephaestus's greater favor, the stone yields its riches in abundance, rewarding the steadfast miner with veins of ore beyond mortal expectation.",
     WorldUpgradeData = {
         InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
@@ -112,7 +112,7 @@ Incantations.addIncantation({
 Incantations.addIncantation({
     Id = "BlueRaja-Hephaestus-More-Ore-3",
     Name = "Ascendant Favor of Hephaestus",
-    Description = "Each strike of an ore vein always yields two ore instead of one.",
+    Description = "Each strike of an ore vein always {#Emph}yields two ore {#Prev}instead of one.",
     FlavorText = "The very core of the earth thunders with power, yielding veins of ore in legendary abundance, echoing the might of the god himself.",
     WorldUpgradeData = {
         InheritFrom = { "DefaultMajorItem", "DefaultCriticalItem" },

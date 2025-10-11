@@ -29,7 +29,7 @@ end)
 Incantations.addIncantation({
     Id = "BlueRaja-MorePlants1",
     Name = "Favor of Demeter",
-    Description = "Gain a 25% chance to harvest an additional plant whenever you gather one.",
+    Description = "Gain a 25% chance to {#Emph}harvest an additional plant {#Prev}whenever you gather one.",
     FlavorText = "Demeter's blessing ensures that the earth yields its bounty generously to those who tend it with care.",
     WorldUpgradeData = {
         InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
@@ -76,7 +76,7 @@ Incantations.addIncantation({
 Incantations.addIncantation({
     Id = "BlueRaja-MorePlants2",
     Name = "Greater Favor of Demeter",
-    Description = "Increase the chance to harvest an additional plant to 50%.",
+    Description = "Increase the chance to {#Emph}harvest an additional plant {#Prev}to 50%.",
     FlavorText = "With Demeter's greater favor, the soil flourishes beyond expectation, rewarding the devoted harvester with nature's abundant gifts.",
     WorldUpgradeData = {
         InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
@@ -122,7 +122,7 @@ Incantations.addIncantation({
 Incantations.addIncantation({
     Id = "BlueRaja-MorePlants3",
     Name = "Ascendant Favor of Demeter",
-    Description = "Harvests always yield two plants instead of one.",
+    Description = "Harvests {#Emph}always yield two plants {#Prev}instead of one.",
     FlavorText = "With Demeter's ascendant blessing, the earth itself awakens in resplendent bounty, bestowing upon the worthy harvester a harvest beyond mortal imagining, as nature's abundance knows no bounds.",
     WorldUpgradeData = {
         InheritFrom = { "DefaultMajorItem", "DefaultCriticalItem" },
