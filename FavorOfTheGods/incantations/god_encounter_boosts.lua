@@ -1,15 +1,18 @@
 -- Logic
 local function enableArtemisEncounterBoost()
     table.insert(EncounterSets.FEncountersDefault, "ArtemisCombatF")
+    printMsg("[Artemis] Enabled encounter boost")
 end
 
 local function enableIcarusEncounterBoost()
     table.insert(EncounterSets.OEncountersDefault, "IcarusCombatO")
     table.insert(EncounterSets.PEncountersDefault, "IcarusCombatP")
+    printMsg("[Icarus] Enabled encounter boost")
 end
 
 local function enableAthenaEncounterBoost()
     table.insert(EncounterSets.PEncountersDefault, "AthenaCombatP")
+    printMsg("[Athena] Enabled encounter boost")
 end
 
 -- Artemis Incantation

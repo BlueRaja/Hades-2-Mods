@@ -10,6 +10,7 @@ local function enhanceRareFishChances()
             end
         end
     end
+    printMsg("[Poseidon] Enhanced rare fish chances")
 end
 
 -- Incantation
@@ -25,7 +26,7 @@ Incantations.addIncantation({
         Cost = {
             FishFCommon = 1,    -- Erebus common fish
             FishGCommon = 1,    -- Oceanus common fish  
-            FishNCommon = 1,    -- City of Ephyra common fish
+            FishHCommon = 1,    -- Fields of Mourning common fish
             FishOCommon = 1,    -- Rifts of Thessaly common fish
         },
         GameStateRequirements = {

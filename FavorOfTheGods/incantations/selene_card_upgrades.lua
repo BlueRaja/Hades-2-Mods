@@ -2,6 +2,7 @@
 local function increaseSpellUpgradeChoices()
     ConsumableData.TalentDrop.AddTalentPoints = ConsumableData.TalentDrop.AddTalentPoints + 1
     ConsumableData.TalentBigDrop.AddTalentPoints = ConsumableData.TalentBigDrop.AddTalentPoints + 1
+    printMsg("[Selene] Increased hex upgrade to " .. ConsumableData.TalentBigDrop.AddTalentPoints)
 end
 
 -- Incantation

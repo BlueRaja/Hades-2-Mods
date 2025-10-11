@@ -2,18 +2,14 @@
 local nectarChance = 0.05
 ModUtil.mod.Path.Wrap("AddResource", function(base, name, amount, source, args)
     local result = base(name, amount, source, args)
-    local isGold = name == "MetaCurrency"
+    local isGold = name == "Money"
+    local isFromThisMod = source and string.find(source, "^BlueRaja")
 
     if Incantations.isIncantationEnabled("BlueRaja-Dionysus-Nectar-Chance") then
-        if not isGold and amount > 0 and isDuringRun() and source ~= "BlueRajaDionysusNectar" and RandomChance(nectarChance) then
+        if not isGold and amount > 0 and not isFromThisMod and isDuringRun() and RandomChance(nectarChance) then
+            wait(0.33)
             AddResource("GiftPoints", 1, "BlueRajaDionysusNectar")
-            
-            -- TODO: Is this necessary?
-            -- thread(ShowResourceUIGain, { 
-            --     ResourceName = "GiftPoints", 
-            --     Amount = 1, 
-            --     Source = "DionysusNectar" 
-            -- })
+            printMsg("[Dionysus] Added 1 Nectar from picking up "..amount.." " ..name.." from " ..source)
         end
     end
     

@@ -16,7 +16,11 @@ end
 
 ModUtil.mod.Path.Wrap("AddResource", function(base, name, amount, source, args)
     if isOre(name) then
-        amount = roundRandomly(amount * getMultiplier())
+        newAmount = roundRandomly(amount * getMultiplier())
+        if newAmount > amount then
+            printMsg("[Hephaestus] Increased harvest of " .. tostring(name) .. " from " .. tostring(amount) .. " to " .. tostring(newAmount))
+            amount = newAmount
+        end
     end
     return base(name, amount, source, args)
 end)

@@ -1,11 +1,18 @@
 -- Logic
 local damageMultiplier = 1.5
-ModUtil.mod.Path.Wrap("SetupMercDamageBonus", function(base, hero, args)
-    base(hero, args)
-    if Incantations.isIncantationEnabled("BlueRaja-Dora-Shade-Damage") then
-        SessionMapState.ShadeMercDamageBonus = SessionMapState.ShadeMercDamageBonus * damageMultiplier
+
+local function enableDoraShadeDamage()
+    -- Increase ShadeMerc damage multiplier
+    if UnitSetData.Allies and UnitSetData.Allies.ShadeMerc and UnitSetData.Allies.ShadeMerc.OutgoingDamageModifiers then
+        for _, modifier in ipairs(UnitSetData.Allies.ShadeMerc.OutgoingDamageModifiers) do
+            if modifier.NonPlayerMultiplier ~= nil then
+                modifier.NonPlayerMultiplier = (modifier.NonPlayerMultiplier or 1.0) * damageMultiplier
+                break
+            end
+        end
     end
-end)
+    printMsg("[Dora] Increased shade damage")
+end
 
 -- Incantation
 Incantations.addIncantation({
@@ -13,6 +20,7 @@ Incantations.addIncantation({
     Name = "Favor of Dora",
     Description = "Shades deal 50% more damage when attacking enemies.",
     FlavorText = "Dora's blessing strengthens the bonds between the living and the dead, empowering the shades that fight alongside you.",
+    OnEnabled = enableDoraShadeDamage,
     WorldUpgradeData = {
         InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Dora",

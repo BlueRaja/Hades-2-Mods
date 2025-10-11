@@ -29,6 +29,7 @@ local function enableOlympusThirdHammer()
             break
         end
     end
+    printMsg("[Olympus] Enabled third hammer upgrade")
 end
 
 -- Incantation

@@ -12,7 +12,11 @@ ModUtil.mod.Path.Wrap("GetTotalHeroTraitValue", function(base, propertyName, arg
         CurrentRun.CurrentRoom.Encounter.ObjectiveSets == "NemesisChallenge"
 
         if isHeraclesChallenge or isNemesisChallenge then
-            return result * rewardMultiplier
+            local newResult = result * rewardMultiplier
+            if newResult > result then
+                printMsg("[Heracles/Nemesis] Increased challenge reward from " .. tostring(result) .. " to " .. tostring(newResult))
+                result = newResult
+            end
         end
     end
 

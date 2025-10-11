@@ -1,6 +1,6 @@
 -- Logic
-local damagePerBone = 200
-local lastRoomDamage = 0
+local damagePerBoneBag = 5000
+local bonesPerBag = 5
 
 local function getCurrentDamage()
     local currentDamage = 0
@@ -14,35 +14,36 @@ end
 
 -- Reset damage tracking at the start of each run
 ModUtil.mod.Path.Wrap("StartNewRun", function(base, prevRun, args)
-    lastRoomDamage = 0
-    return base(prevRun, args)
+    local value = base(prevRun, args)
+    CurrentRun.lastRoomDamage = 0
+    return value
 end)
 
 -- Track damage at the end of each room and reward bones
-ModUtil.mod.Path.Wrap("LeaveRoomPresentation", function(base, currentRun, exitDoor)
-    base(currentRun, exitDoor)
-    
+ModUtil.mod.Path.Wrap("LeaveRoom", function(base, currentRun, door)
     if Incantations.isIncantationEnabled("BlueRaja-Schelemeus-Damage-Bones") and isDuringRun() then
         local currentDamage = getCurrentDamage()
         
-        -- Calculate how many multiples of 200 damage have been passed since last room
-        local totalBonesEarnedLastRoom = math.floor(lastRoomDamage / damagePerBone)
-        local totalBonesEarnedCurrentRoom = math.floor(currentDamage / damagePerBone)
-        local bonesToAdd = totalBonesEarnedCurrentRoom - totalBonesEarnedLastRoom
+        -- Calculate how many multiples of 'damagePerBoneBag' damage have been passed since last room
+        local totalBonesEarnedLastRoom = math.floor(CurrentRun.lastRoomDamage / damagePerBoneBag)
+        local totalBonesEarnedCurrentRoom = math.floor(currentDamage / damagePerBoneBag)
+        local bonesToAdd = (totalBonesEarnedCurrentRoom - totalBonesEarnedLastRoom)*bonesPerBag
         
         if bonesToAdd > 0 then
-            AddResource("MetaCurrency", bonesEarned, "BlueRajaSchelemeusDamage")
+            AddResource("MetaCurrency", bonesToAdd, "BlueRajaSchelemeusDamage")
+            printMsg("[Schelemeus] Added " .. tostring(bonesToAdd) .. " bones")
         end
         
-        lastRoomDamage = currentDamage
+        CurrentRun.lastRoomDamage = currentDamage
     end
+    return base(currentRun, door)
 end)
 
 -- Incantation
 Incantations.addIncantation({
     Id = "BlueRaja-Schelemeus-Damage-Bones",
     Name = "Favor of Schelemeus",
-    Description = "Gain 1 bone for every "..damagePerBone.." damage dealt.",
+    Description = "Gain"..bonesPerBag.." bones for every "..damagePerBoneBag.." damage dealt.",
     FlavorText = "Every strike you land earns you rewards, young one. The more you {#Emph}pain{#Prev}, the more you gain!",
     WorldUpgradeData = {
         InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },

@@ -7,7 +7,7 @@ local function isCharacterGift(source)
     }
     
     for _, characterName in ipairs(characterNames) do
-        if source == characterName then
+        if string.find(source, characterName) then
             return true
         end
     end
@@ -20,16 +20,10 @@ ModUtil.mod.Path.Wrap("SpendResource", function(base, name, amount, source, args
     
     if Incantations.isIncantationEnabled("BlueRaja-Aphrodite-Nectar-Refund") then
         -- Check if GiftPoints (Nectar) are being spent on a relationship
-        if name == "GiftPoints" and amount == 1 and source ~= "BlueRajaAphroditeRefund" and isCharacterGift(source) and RandomChance(0.25) then
+        if name == "GiftPoints" and amount == 1 and source ~= "BlueRajaAphroditeRefund" and isCharacterGift(source) and RandomChance(1) then
+            wait(0.66)
             AddResource("GiftPoints", 1, "BlueRajaAphroditeRefund")
-               
-            -- TODO: Is this necessary?
-            -- Show notification
-            -- thread(ShowResourceUIGain, { 
-            --     ResourceName = "GiftPoints", 
-            --     Amount = amount, 
-            --     Source = "AphroditeRefund" 
-            -- })
+            printMsg("[Aphrodite] Refunded 1 Nectar")
         end
     end
     

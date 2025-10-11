@@ -1,15 +1,21 @@
 -- Logic
 local function allowRubbishToBeSold()
-    if ScreenData.MarketScreen and ScreenData.MarketScreen.ItemKeys then
-        table.insert(ScreenData.MarketScreen.ItemKeys, {
-            BuyName = "MetaCurrency", 
-            BuyAmount = 40,
-            Cost = {
-                TrashPoints = 1,
-            },
-            Priority = true,
-        })
+    if ScreenData.MarketScreen and ScreenData.MarketScreen.ItemCategories then
+        for i, category in ipairs(ScreenData.MarketScreen.ItemCategories) do
+            if category.Name == "MarketScreen_Sell" then
+                table.insert(category, {
+                    BuyName = "MetaCurrency", 
+                    BuyAmount = 40,
+                    Cost = {
+                        TrashPoints = 1,
+                    },
+                    Priority = true,
+                })
+                break
+            end
+        end
     end
+    printMsg("[Eris] Enabled rubbish to be sold")
 end
 
 -- Incantation
