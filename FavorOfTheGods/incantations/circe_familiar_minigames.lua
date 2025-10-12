@@ -3,6 +3,7 @@ function enableCirceFamiliarMinigames()
     -- Set properties on each familiar if not already set
     for familiarName, familiarData in pairs(FamiliarData) do
         if familiarName ~= "BaseFamiliar" and familiarData.InheritFrom and familiarData.InheritFrom[1] == "BaseFamiliar" then
+            -- These need to be set or "UseShovelPoint" will crash
             familiarData.HeroHealthPercentForDig = familiarData.HeroHealthPercentForDig or 0
             familiarData.HeroManaPercentForDig = familiarData.HeroManaPercentForDig or 0
         end

@@ -1,5 +1,5 @@
 -- Logic
-local damagePerBoneBag = 5000
+local damagePerBoneBag = 7500
 local bonesPerBag = 5
 
 local function getCurrentDamage()
