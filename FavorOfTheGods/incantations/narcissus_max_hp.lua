@@ -3,7 +3,9 @@ local function getTotalDamageTaken()
     local total = 0
     if CurrentRun and CurrentRun.DamageTakenFromRecord then
         for _, amount in pairs(CurrentRun.DamageTakenFromRecord) do
-            total = total + amount
+            if amount then
+                total = total + amount
+            end
         end
     end
     return total

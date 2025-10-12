@@ -2,7 +2,7 @@
 local function enableOlympusThirdHammer()
     -- Allow early hammer upgrade if you've found less than 2 hammers
     for i, requirement in ipairs(NamedRequirementsData.HammerLootRequirements) do
-        if requirement.PathFalse and 
+        if requirement and requirement.PathFalse and 
            requirement.PathFalse[1] == "CurrentRun" and 
            requirement.PathFalse[2] == "LootTypeHistory" and 
            requirement.PathFalse[3] == "WeaponUpgrade" then
@@ -17,7 +17,7 @@ local function enableOlympusThirdHammer()
     
     -- Allow late hammer upgrade if you've found less than 3 hammers
     for i, requirement in ipairs(NamedRequirementsData.LateHammerLootRequirements) do
-        if requirement.Path and 
+        if requirement and requirement.Path and 
            requirement.Path[1] == "CurrentRun" and 
            requirement.Path[2] == "LootTypeHistory" and 
            requirement.Path[3] == "WeaponUpgrade" then

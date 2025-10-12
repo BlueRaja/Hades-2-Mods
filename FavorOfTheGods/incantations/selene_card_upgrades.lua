@@ -1,8 +1,12 @@
 -- Logic
 local function increaseSpellUpgradeChoices()
-    ConsumableData.TalentDrop.AddTalentPoints = ConsumableData.TalentDrop.AddTalentPoints + 1
-    ConsumableData.TalentBigDrop.AddTalentPoints = ConsumableData.TalentBigDrop.AddTalentPoints + 1
-    printMsg("[Selene] Increased hex upgrade to " .. ConsumableData.TalentBigDrop.AddTalentPoints)
+    if ConsumableData.TalentDrop and ConsumableData.TalentDrop.AddTalentPoints then
+        ConsumableData.TalentDrop.AddTalentPoints = ConsumableData.TalentDrop.AddTalentPoints + 1
+    end
+    if ConsumableData.TalentBigDrop and ConsumableData.TalentBigDrop.AddTalentPoints then
+        ConsumableData.TalentBigDrop.AddTalentPoints = ConsumableData.TalentBigDrop.AddTalentPoints + 1
+        printMsg("[Selene] Increased hex upgrade to " .. ConsumableData.TalentBigDrop.AddTalentPoints)
+    end
 end
 
 -- Incantation

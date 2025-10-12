@@ -11,6 +11,9 @@ local function getMultiplier()
 end
 
 local function isOre(name)
+    if not name then
+        return false
+    end
     return string.sub(name, 1, 3) == "Ore"
 end
 

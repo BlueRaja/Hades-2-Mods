@@ -9,7 +9,7 @@ ModUtil.mod.Path.Wrap("AddResource", function(base, name, amount, source, args)
         if not isGold and amount > 0 and not isFromThisMod and isDuringRun() and RandomChance(nectarChance) then
             wait(0.33)
             AddResource("GiftPoints", 1, "BlueRajaDionysusNectar")
-            printMsg("[Dionysus] Added 1 Nectar from picking up "..amount.." " ..name.." from " ..source)
+            printMsg("[Dionysus] Added 1 Nectar from picking up "..amount.." " ..name.." from " ..tostring(source))
         end
     end
     

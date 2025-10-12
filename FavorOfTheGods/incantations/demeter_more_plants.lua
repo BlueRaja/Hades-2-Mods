@@ -11,6 +11,9 @@ local function getMultiplier()
 end
 
 local function isPlant(name)
+    if not name then
+        return false
+    end
     return string.sub(name, 1, 5) == "Plant" and string.sub(name, -4) ~= "Seed"
 end
 

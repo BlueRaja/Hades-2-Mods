@@ -2,7 +2,7 @@
 local function allowRubbishToBeSold()
     if ScreenData.MarketScreen and ScreenData.MarketScreen.ItemCategories then
         for i, category in ipairs(ScreenData.MarketScreen.ItemCategories) do
-            if category.Name == "MarketScreen_Sell" then
+            if category and category.Name == "MarketScreen_Sell" then
                 table.insert(category, {
                     BuyName = "MetaCurrency", 
                     BuyAmount = 40,

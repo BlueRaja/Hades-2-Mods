@@ -38,7 +38,7 @@ ModUtil.mod.Path.Wrap("CreateBoonLootButtons", function(base, screen, lootData, 
     local canReroll = HeroHasTrait("PanelRerollMetaUpgrade")
     local isHammer = lootData.Name == "WeaponUpgrade"
     local isFirstRerollFree = RerollCosts.Boon == 0
-    if canReroll and not isHammer and isFirstRerollFree and isDuringRun() then
+    if canReroll and not isHammer and isFirstRerollFree and isDuringRun() and screen and screen.Components and screen.Components.RerollButton then
         cost = (CurrentRun.CurrentRoom.SpentRerolls and CurrentRun.CurrentRoom.SpentRerolls[lootData.ObjectId] or 0)
 
         screen.Components.RerollButton.OnPressedFunctionName = "AttemptPanelReroll"

@@ -1,10 +1,14 @@
 -- Logic
+local characterNames = {
+    "Aphrodite", "Dora", "Narcissus", "Echo", "Hecate", "Artemis", "Demeter", 
+    "Hephaestus", "Hades", "Persephone", "Charon", "Hypnos", "Skelly", 
+    "Odysseus", "Nemesis", "Eris", "Moros", "Chronos", "Circe", "Heracles"
+}
+
 local function isCharacterGift(source)
-    local characterNames = {
-        "Aphrodite", "Dora", "Narcissus", "Echo", "Hecate", "Artemis", "Demeter", 
-        "Hephaestus", "Hades", "Persephone", "Charon", "Hypnos", "Skelly", 
-        "Odysseus", "Nemesis", "Eris", "Moros", "Chronos", "Circe", "Heracles"
-    }
+    if not source then
+        return false
+    end
     
     for _, characterName in ipairs(characterNames) do
         if string.find(source, characterName) then

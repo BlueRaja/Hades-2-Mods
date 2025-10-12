@@ -5,7 +5,7 @@ local function enableDoraShadeDamage()
     -- Increase ShadeMerc damage multiplier
     if UnitSetData.Allies and UnitSetData.Allies.ShadeMerc and UnitSetData.Allies.ShadeMerc.OutgoingDamageModifiers then
         for _, modifier in ipairs(UnitSetData.Allies.ShadeMerc.OutgoingDamageModifiers) do
-            if modifier.NonPlayerMultiplier ~= nil then
+            if modifier and modifier.NonPlayerMultiplier ~= nil then
                 modifier.NonPlayerMultiplier = (modifier.NonPlayerMultiplier or 1.0) * damageMultiplier
                 break
             end

@@ -6,14 +6,14 @@ local function increaseArachneArmor()
     for traitName, traitData in pairs(TraitData) do
         if string.find(traitName, "Costume$") then
             -- Check if it has SetupFunction with CostumeArmor
-            if traitData.SetupFunction and traitData.SetupFunction.Name == "CostumeArmor" then
+            if traitData.SetupFunction and traitData.SetupFunction.Name == "CostumeArmor" and traitData.SetupFunction.Args then
                 traitData.SetupFunction.Args.BaseAmount = (traitData.SetupFunction.Args.BaseAmount or 0) + armorBonus
             end
             
             -- Check if it has SetupFunctions array with CostumeArmor
             if traitData.SetupFunctions then
                 for i, setupFunction in pairs(traitData.SetupFunctions) do
-                    if setupFunction.Name == "CostumeArmor" then
+                    if setupFunction and setupFunction.Name == "CostumeArmor" and setupFunction.Args then
                         setupFunction.Args.BaseAmount = (setupFunction.Args.BaseAmount or 0) + armorBonus
                     end
                 end

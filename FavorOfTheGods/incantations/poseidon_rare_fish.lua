@@ -3,11 +3,13 @@ local function enhanceRareFishChances()
     -- Modify fish weights in all biomes to make rare and legendary fish more common
     for biomeName, biomeData in pairs(FishingData.BiomeFish) do
         if biomeName ~= "Defaults" then  -- Skip the defaults table
-            for _, fishData in ipairs(biomeData) do
+        for _, fishData in ipairs(biomeData) do
+            if fishData and fishData.Name and fishData.Weight then
                 if string.find(fishData.Name, "Rare") or string.find(fishData.Name, "Legendary") then
                     fishData.Weight = fishData.Weight * 2  -- Double weight for rare fish
                 end
             end
+        end
         end
     end
     printMsg("[Poseidon] Enhanced rare fish chances")

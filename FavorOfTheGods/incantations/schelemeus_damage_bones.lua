@@ -6,7 +6,9 @@ local function getCurrentDamage()
     local currentDamage = 0
     if CurrentRun.DamageDealtByHeroRecord then
         for sourceName, amount in pairs(CurrentRun.DamageDealtByHeroRecord) do
-            currentDamage = currentDamage + amount
+            if amount then
+                currentDamage = currentDamage + amount
+            end
         end
     end
     return currentDamage

@@ -33,7 +33,7 @@ ModUtil.mod.Path.Wrap("RemoveStoreItem", function(base, args)
     -- Check if our incantation is enabled and we have the trait
     if Incantations.isIncantationEnabled("BlueRaja-Echo-Shop-Respawn") and 
        HeroHasTrait("BlueRajaEchoShopRespawn") and
-       args.Name ~= "SpellDrop" then
+       args and args.Name ~= "SpellDrop" then
         
         printMsg("[Echo] Respawned item, removing respawn trait")
         
