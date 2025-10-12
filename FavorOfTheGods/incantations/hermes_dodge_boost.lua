@@ -2,6 +2,7 @@
 local function enableHermesDodgeBoost()
     OverwriteTableKeys(TraitData, {
         BlueRajaHermesDodgeBoost = {
+            Icon = "Boon_Hermes_35",
             InheritFrom = { "BaseTrait" },
             PropertyChanges = {
                 {
@@ -9,15 +10,16 @@ local function enableHermesDodgeBoost()
                     ChangeValue = 0.05,
                     ChangeType = "Add",
                     DataValue = false,
+                    ReportValues = { ReportedDodgeChance = "ChangeValue" },
                 },
             },
             StatLines = {
-                "DodgeChanceStatDisplay",
+                "DodgeChanceStatDisplay1",
             },
             ExtractValues = {
                 {
-                    Key = "ChangeValue",
-                    ExtractAs = "TooltipDodgeBonus",
+                    Key = "ReportedDodgeChance",
+                    ExtractAs = "StatDisplay1",
                     Format = "Percent",
                 },
             },
@@ -34,6 +36,17 @@ ModUtil.mod.Path.Wrap("StartNewRun", function(base, prevRun, args)
     end
     
     return result
+end)
+
+-- Need to hook TraitText to get description to display correctly during run
+local traitTextFile = rom.path.combine(rom.paths.Content(), "Game/Text/en/TraitText.en.sjson")
+SJSON.hook(traitTextFile, function(data)
+    table.insert(data.Texts, SJSON.to_object({
+      Id = "BlueRajaHermesDodgeBoost",
+      InheritFrom = "BaseBoon",
+      DisplayName = "Favor of Hermes",
+      Description = "Increased dodge chance",
+    }, { "Id", "InheritFrom", "DisplayName", "Description"}))
 end)
 
 -- Incantation

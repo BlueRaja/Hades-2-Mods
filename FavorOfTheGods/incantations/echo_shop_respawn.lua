@@ -3,8 +3,8 @@ local function enableEchoShopRespawn()
     -- Add our custom trait to TraitData
     OverwriteTableKeys(TraitData, {
         BlueRajaEchoShopRespawn = {
-            Icon = "Boon_Hermes_32",
-            InheritFrom = { "BaseTrait", "FireBoon"},
+            Icon = "Boon_Echo_08",
+            InheritFrom = { "BaseTrait" },
             RarityLevels = {
                 Common = {
                     Multiplier = 1.0,
@@ -12,7 +12,6 @@ local function enableEchoShopRespawn()
             },
             FirstPurchaseDiscount = 1.0, -- No discount, just restocking
             StatLines = {
-                "DiscountStatDisplay",
             },
             ExtractValues = {
                 {
@@ -21,10 +20,21 @@ local function enableEchoShopRespawn()
                     Format = "Percent",
                 },
             },
-            RemainingUses = 1,
+            TraitName = "BlueRajaEchoShopRespawn",
         }
     })
 end
+
+-- Need to hook TraitText to get description to display correctly during run
+local traitTextFile = rom.path.combine(rom.paths.Content(), "Game/Text/en/TraitText.en.sjson")
+SJSON.hook(traitTextFile, function(data)
+    table.insert(data.Texts, SJSON.to_object({
+      Id = "BlueRajaEchoShopRespawn",
+      InheritFrom = "BaseBoon",
+      DisplayName = "Favor of Echo",
+      Description = "The first item purchased at {$Keywords.WellShop} spawns a second item",
+    }, { "Id", "InheritFrom", "DisplayName", "Description"}))
+end)
 
 -- Hook into RemoveStoreItem to remove the trait after it's used
 ModUtil.mod.Path.Wrap("RemoveStoreItem", function(base, args)
