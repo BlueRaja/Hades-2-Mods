@@ -24,23 +24,26 @@ end)
 ModUtil.mod.Path.Wrap("LeaveRoom", function(base, currentRun, door)
     -- Add max HP if the room was completed without taking damage
     -- Have to do a bunch of stupid extra work because CurrentRun.CurrentRoom.Encounter is nil inside LeaveRoom
-    if Incantations.isIncantationEnabled("BlueRaja-Narcissus-Max-HP") then
-        local totalDamageTaken = getTotalDamageTaken()
-        local playerTookDamage = totalDamageTaken > CurrentRun.totalDamageLastRoom
+    local roomName = CurrentRun.CurrentRoom and CurrentRun.CurrentRoom.Name
+    if Incantations.isIncantationEnabled("BlueRaja-Narcissus-Max-HP") and isDuringRun() and roomName then
+        local roomData = RoomData[roomName] or { NoReward = true }
+        if not roomData.NoReward then
+            local totalDamageTaken = getTotalDamageTaken()
+            local playerTookDamage = totalDamageTaken > CurrentRun.totalDamageLastRoom
 
-        printMsg("[Narcissus] lastCompletedEncounterType: " .. tostring(CurrentRun.lastCompletedEncounterType) .. " totalDamageTaken: " .. tostring(totalDamageTaken) .. " totalDamageLastRoom: " .. tostring(CurrentRun.totalDamageLastRoom))
-        if CurrentRun.lastCompletedEncounterType ~= nil and not playerTookDamage then
-            if CurrentRun.lastCompletedEncounterType == "Boss" then
-                AddMaxHealth(3)
-                printMsg("[Narcissus] Added 3 Max Health")
-            elseif CurrentRun.lastCompletedEncounterType ~= "NonCombat" and CurrentRun.lastCompletedEncounterType ~= "Empty" then
-                AddMaxHealth(1)
-                printMsg("[Narcissus] Added 1 Max Health")
+            if CurrentRun.lastCompletedEncounterType ~= nil and not playerTookDamage then
+                if CurrentRun.lastCompletedEncounterType == "Boss" then
+                    AddMaxHealth(3)
+                    printMsg("[Narcissus] Added 3 Max Health")
+                elseif CurrentRun.lastCompletedEncounterType ~= "NonCombat" and CurrentRun.lastCompletedEncounterType ~= "Empty" then
+                    AddMaxHealth(1)
+                    printMsg("[Narcissus] Added 1 Max Health")
+                end
             end
-        end
 
-        CurrentRun.lastCompletedEncounterType = nil
-        CurrentRun.totalDamageLastRoom = totalDamageTaken
+            CurrentRun.lastCompletedEncounterType = nil
+            CurrentRun.totalDamageLastRoom = totalDamageTaken
+        end
     end
     
     return base(currentRun, door)
