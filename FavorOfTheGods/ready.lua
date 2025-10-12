@@ -24,6 +24,7 @@ end
 
 import "incantations/aphrodite_nectar_refund.lua"
 import "incantations/arachne_armor_boost.lua"
+import "incantations/circe_familiar_minigames.lua"
 import "incantations/chaos_free_reroll.lua"
 import "incantations/charon_gold_drops.lua"
 import "incantations/demeter_more_plants.lua"
