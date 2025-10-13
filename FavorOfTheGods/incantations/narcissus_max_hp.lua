@@ -104,7 +104,6 @@ Incantations.addIncantation({
         ["zh-TW"] = "那耳喀索斯獎勵那些保持美麗和優雅的人，為那些從戰鬥中毫髮無損地出現的人賦予青春的活力。",
     },
     WorldUpgradeData = {
-        InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Narcissus",
         Cost = {
             GiftPoints = 6,        -- Nectar

@@ -65,7 +65,6 @@ Incantations.addIncantation({
     },
     OnEnabled = increaseSpellUpgradeChoices,
     WorldUpgradeData = {
-        InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Selene",
         Cost = {
             CardUpgradePoints = 20,  -- Moon Dust

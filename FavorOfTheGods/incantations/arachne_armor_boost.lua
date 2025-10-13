@@ -78,7 +78,6 @@ Incantations.addIncantation({
     },
     OnEnabled = increaseArachneArmor,
     WorldUpgradeData = {
-        InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Arachne",
         Cost = {
             MetaFabric = 15,     -- Fate Fabric

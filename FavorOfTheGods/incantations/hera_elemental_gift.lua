@@ -74,7 +74,6 @@ Incantations.addIncantation({
     },
     OnEnabled = enableHeraElementalGift,
     WorldUpgradeData = {
-        InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Hera",
         Cost = {
             OreChaosProtoplasm = 1,  -- Flux

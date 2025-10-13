@@ -71,7 +71,6 @@ Incantations.addIncantation({
     },
     OnEnabled = enableArtemisEncounterBoost,
     WorldUpgradeData = {
-        InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Artemis",
         Cost = {
             MixerFBoss = 2,      -- Cinder
@@ -150,7 +149,6 @@ Incantations.addIncantation({
     },
     OnEnabled = enableIcarusEncounterBoost,
     WorldUpgradeData = {
-        InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Icarus",
         Cost = {
             MixerNBoss = 2,      -- Wool
@@ -229,7 +227,6 @@ Incantations.addIncantation({
     },
     OnEnabled = enableAthenaEncounterBoost,
     WorldUpgradeData = {
-        InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Athena",
         Cost = {
             MixerHBoss = 3,      -- Tears

@@ -121,6 +121,18 @@ local function validateAddIncantationProps(props)
     end
 end
 
+local function addDefaultValuesToWorldUpgradeData(worldUpgradeData)
+    if worldUpgradeData.InheritFrom == nil then
+        worldUpgradeData.InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" }
+    end
+    if worldUpgradeData.Icon == nil then
+        worldUpgradeData.Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\Mel_01"
+    end
+    if worldUpgradeData.GameStateRequirements == nil then
+        worldUpgradeData.GameStateRequirements = { }
+    end
+end
+
 --- Adds a new incantation to the game. Must be called at the start of the game (ie. ready.lua or ModUtil.once_loaded.game)
 -- @param props table Table containing incantation properties:
 --   @field Id string **(required)** - A unique internal ID to reference this incantation by.
@@ -131,6 +143,7 @@ end
 --   @field OnEnabled function? **(optional)** - A function to be called when the incantation is enabled. The function can optionally take two parameters: `source` (string, either "load" or "purchase") specifying whether the function is being called due to a save file loading or the incantation being purchased; and `incantationId` (string), the ID of the incantation being enabled.
 function public.addIncantation(props)
     validateAddIncantationProps(props)
+    addDefaultValuesToWorldUpgradeData(props.WorldUpgradeData)
 
     WorldUpgradeData[props.Id] = props.WorldUpgradeData
     WorldUpgradeData[props.Id].Name = props.Id

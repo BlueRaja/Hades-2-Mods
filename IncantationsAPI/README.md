@@ -13,7 +13,7 @@ This guide assumes you're writing a mod based on Hell2Modding/ModUtil. You can c
     Incantations = mods['BlueRaja-IncantationsAPI']
     ````
 3. In `ready.lua`, call `Incantations.addIncantation(params)`. See below for details.
-  * _(If you are not using `SGG_Modding-ReLoad`, meaning you don't have a `ready.lua`, then it must be called inside of a `ModUtil.once_loaded.game()` call)_
+    * _(If you are not using `SGG_Modding-ReLoad`, meaning you don't have a `ready.lua`, then it must be called inside of a `ModUtil.once_loaded.game()` call)_
 
 ## Methods
 
@@ -93,21 +93,21 @@ The `Name`, `Description`, and `FlavorText` fields can all be string constants, 
 
 The following language codes are supported for translation tables:
 
-* `de` - German
-* `el` - Greek  
-* `en` - English
-* `es` - Spanish
-* `fr` - French
-* `it` - Italian
-* `ja` - Japanese
-* `ko` - Korean
-* `pl` - Polish
-* `pt-BR` - Portuguese (Brazil)
-* `ru` - Russian
-* `tr` - Turkish
-* `uk` - Ukrainian
-* `zh-CN` - Chinese (Simplified)
-* `zh-TW` - Chinese (Traditional)
+`de` - German
+`el` - Greek  
+`en` - English
+`es` - Spanish
+`fr` - French
+`it` - Italian
+`ja` - Japanese
+`ko` - Korean
+`pl` - Polish
+`pt-BR` - Portuguese (Brazil)
+`ru` - Russian
+`tr` - Turkish
+`uk` - Ukrainian
+`zh-CN` - Chinese (Simplified)
+`zh-TW` - Chinese (Traditional)
 
 An example:
 ```lua
@@ -140,7 +140,6 @@ Incantations.addIncantation({
     Description = "{#Emph}25% chance {#Prev} to get {!Icons.GiftPoints} back when spending it on relationships.",
     FlavorText = "Aphrodite's blessing ensures that love is never wasted, proliferating tokens of affection to those who give freely from their hearts.",
     WorldUpgradeData = {
-        InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Aphrodite",
         Cost = {
             GiftPoints = 5,        -- Nectar

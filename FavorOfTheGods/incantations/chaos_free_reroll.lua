@@ -121,7 +121,6 @@ Incantations.addIncantation({
         ["zh-TW"] = "混沌的祝福放棄秩序而選擇熵，讓你能夠重塑命運本身。",
     },
     WorldUpgradeData = {
-        InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Chaos",
         Cost = {
             Mixer6Common = 2,        -- Darkness

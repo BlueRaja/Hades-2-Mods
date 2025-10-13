@@ -122,7 +122,6 @@ Incantations.addIncantation({
     },
     OnEnabled = enableEchoShopRespawn,
     WorldUpgradeData = {
-        InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Echo",
         Cost = {
             MixerIBoss = 1,      -- Zodiac Sand

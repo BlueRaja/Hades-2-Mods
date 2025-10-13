@@ -89,7 +89,6 @@ Incantations.addIncantation({
         ["zh-TW"] = "阿芙洛狄忒的祝福確保愛情永不浪費，為那些發自內心自由給予的人增加感情的象徵。",
     },
     WorldUpgradeData = {
-        InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Aphrodite",
         Cost = {
             GiftPoints = 5,        -- Nectar

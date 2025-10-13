@@ -70,7 +70,6 @@ Incantations.addIncantation({
     },
     OnEnabled = enableDoraShadeDamage,
     WorldUpgradeData = {
-        InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Dora",
         Cost = {
             MemPointsCommon = 500,    -- Psyche

@@ -83,7 +83,6 @@ Incantations.addIncantation({
         ["zh-TW"] = "赫菲斯托斯的祝福迫使石頭露出其隱藏的礦脈，獎勵那些以力量和決心擊打大地的人。",
     },
     WorldUpgradeData = {
-        InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Hephaestus",
         Cost =
         {
@@ -173,7 +172,6 @@ Incantations.addIncantation({
         ["zh-TW"] = "有了赫菲斯托斯的更大恩惠，石頭大量產出其財富，用超越凡人期望的礦石礦脈獎勵堅定的礦工。",
     },
     WorldUpgradeData = {
-        InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Hephaestus",
         Cost =
         {

@@ -74,7 +74,6 @@ Incantations.addIncantation({
     },
     OnEnabled = allowRubbishToBeSold,
     WorldUpgradeData = {
-        InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Eris",
         Cost = {
             TrashPoints = 15,    -- Rubbish

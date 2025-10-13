@@ -78,7 +78,6 @@ Incantations.addIncantation({
     },
     OnEnabled = enableCharonGoldDrops,
     WorldUpgradeData = {
-        InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Charon",
         Cost = {
             CharonPoints = 10,        -- Obol points

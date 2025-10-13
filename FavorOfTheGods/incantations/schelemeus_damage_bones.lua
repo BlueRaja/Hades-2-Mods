@@ -96,7 +96,6 @@ Incantations.addIncantation({
         ["zh-TW"] = "你擊中的每一擊都會帶來獎勵，年輕人。你造成的{#Emph}痛苦{#Prev}越多，獲得的就越多！",
     },
     WorldUpgradeData = {
-        InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Skelly",
         Cost = {
             MetaCurrency = 200,        -- Bones

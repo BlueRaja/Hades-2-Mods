@@ -71,7 +71,6 @@ Incantations.addIncantation({
         ["zh-TW"] = "有了狄俄尼索斯的恩惠，世界的快樂可能隨時讓你享受。",
     },
     WorldUpgradeData = {
-        InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Dionysus",
         Cost = {
             GiftPoints = 5,          -- Nectar

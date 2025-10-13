@@ -105,7 +105,6 @@ Incantations.addIncantation({
     },
     OnEnabled = enableHermesDodgeBoost,
     WorldUpgradeData = {
-        InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Hermes",
         Cost = {
             MixerPBoss = 1,         -- Eagle's Feather

@@ -83,7 +83,6 @@ Incantations.addIncantation({
         ["zh-TW"] = "得墨忒耳的祝福確保大地慷慨地將其豐饒賜予那些細心照料它的人。",
     },
     WorldUpgradeData = {
-        InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Demeter",
         Cost =
         {
@@ -178,7 +177,6 @@ Incantations.addIncantation({
         ["zh-TW"] = "有了得墨忒耳的更大恩惠，土壤超預期地繁榮，用大自然豐富的禮物獎勵虔誠的收穫者。",
     },
     WorldUpgradeData = {
-        InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Demeter",
         Cost =
         {

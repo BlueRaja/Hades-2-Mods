@@ -78,7 +78,6 @@ Incantations.addIncantation({
         ["zh-TW"] = "赫拉克勒斯的祝福確保那些在他的考驗中證明自己力量的人獲得更大的財富，尊重英雄事蹟的傳統。",
     },
     WorldUpgradeData = {
-        InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Heracles",
         Cost = {
             OreNBronze = 5,         -- Bronze
@@ -154,7 +153,6 @@ Incantations.addIncantation({
         ["zh-TW"] = "涅墨西斯的祝福確保那些面對她報復考驗的人獲得更大的財富，因為正義要求對值得的人給予適當的補償。",
     },
     WorldUpgradeData = {
-        InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Nemesis",
         Cost = {
             OreHGlassrock = 5,       -- Glassrock

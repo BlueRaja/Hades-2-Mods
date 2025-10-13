@@ -116,7 +116,6 @@ Incantations.addIncantation({
     },
     OnEnabled = enableCirceFamiliarMinigames,
     WorldUpgradeData = {
-        InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Circe",
         Cost = {
             CardUpgradePoints = 2,    -- Moon Dust

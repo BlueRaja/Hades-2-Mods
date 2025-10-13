@@ -71,7 +71,6 @@ Incantations.addIncantation({
     },
     OnEnabled = enhanceRareFishChances,
     WorldUpgradeData = {
-        InheritFrom = { "DefaultHubItem", "DefaultCriticalItem" },
         Icon = "GUI\\Screens\\AwardMenu\\KeepsakeMaxGift\\KeepsakeMaxGift_small\\Poseidon",
         Cost = {
             FishFCommon = 1,    -- Erebus common fish
