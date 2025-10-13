@@ -61,29 +61,76 @@ function dumpTable(tbl, indent)
 end
 
 local requiredFields = { "Id", "Name", "Description", "FlavorText", "WorldUpgradeData" }
+local languageCodes = {
+    de = true,
+    el = true,
+    en = true,
+    es = true,
+    fr = true,
+    it = true,
+    ja = true,
+    ko = true,
+    pl = true,
+    ["pt-BR"] = true,
+    ru = true,
+    tr = true,
+    uk = true,
+    ["zh-CN"] = true,
+    ["zh-TW"] = true,
+}
 local addedIncantations = {}
 local helpTextFileHasBeenLoaded = false
 
---- Adds a new incantation to the game. Must be called at the start of the game (ie. ready.lua or ModUtil.once_loaded.game)
--- @param props table Table containing incantation properties:
---   @field Id string **(required)** - A unique internal ID to reference this incantation by.
---   @field Name string **(required)** - The name displayed in the cauldron.
---   @field Description string **(required)** - The description shown when hovering over the incantation in the cauldron.
---   @field FlavorText string **(required)** - The flavor text shown in italics below the description when hovering over the incantation in the cauldron.
---   @field WorldUpgradeData table **(required)** - The information about the incantation, in the same format as the entries in `WorldUpgradeData.lua`. See the README for more details.
---   @field OnEnabled function? **(optional)** - A function to be called when the incantation is enabled. The function can optionally take two parameters: `source` (string, either "load" or "purchase") specifying whether the function is being called due to a save file loading or the incantation being purchased; and `incantationId` (string), the ID of the incantation being enabled.
-function public.addIncantation(props)
+-- The fields "Name", "Description", and "FlavorText" can be strings or translation tables
+-- of the form { en: "cat", fr: "chat", etc.}
+local function validateTranslationField(id, fieldName, fieldValue)
+    if type(fieldValue) == "string" then
+        return
+    end
+    if type(fieldValue) == "table" then
+        for lang, value in pairs(fieldValue) do
+            if not languageCodes[lang] then
+                error(id..": Invalid language code for field '".. fieldName .. "': " .. tostring(lang))
+            end
+            if type(value) ~= "string" then
+                error(id..": Value for field '".. fieldName .. "', language '"..tostring(lang).."' must be a string, got "..type(value))
+            end
+        end
+        if not languageCodes["en"] then
+            error(id..": Field '" .. fieldName .. " must provide an english translation")
+        end
+        return
+    end
+    error(id..": Field '" .. fieldName .. "' must be a string or translation table")
+end
+
+local function validateAddIncantationProps(props)
     for _, field in ipairs(requiredFields) do
         if not props[field] then
-            error("Missing required field in addIncantation: " .. field.. ". This is likely a bug in that mod.")
+            error((props.Id or "") ..": Missing required field in addIncantation: " .. field.. ". This is likely a bug in that mod.")
         end
     end
+    validateTranslationField(props.Id, "Name", props.Name)
+    validateTranslationField(props.Id, "Description", props.Description)
+    validateTranslationField(props.Id, "FlavorText", props.FlavorText)
     if addedIncantations[props.Id] then
         error("Incantation already added: " ..props.Id.. ". This is likely a bug in that mod.")
     end
     if helpTextFileHasBeenLoaded then
         error("addIncantation("..props.Id..") must be called at the start of the game (ie. ready.lua or ModUtil.once_loaded.game). This is because the HelpText file is only read once, shortly after the game loads.")
     end
+end
+
+--- Adds a new incantation to the game. Must be called at the start of the game (ie. ready.lua or ModUtil.once_loaded.game)
+-- @param props table Table containing incantation properties:
+--   @field Id string **(required)** - A unique internal ID to reference this incantation by.
+--   @field Name string|table **(required)** - The name displayed in the cauldron.
+--   @field Description string|table **(required)** - The description shown when hovering over the incantation in the cauldron.
+--   @field FlavorText string|table **(required)** - The flavor text shown in italics below the description when hovering over the incantation in the cauldron.
+--   @field WorldUpgradeData table **(required)** - The information about the incantation, in the same format as the entries in `WorldUpgradeData.lua`. See the README for more details.
+--   @field OnEnabled function? **(optional)** - A function to be called when the incantation is enabled. The function can optionally take two parameters: `source` (string, either "load" or "purchase") specifying whether the function is being called due to a save file loading or the incantation being purchased; and `incantationId` (string), the ID of the incantation being enabled.
+function public.addIncantation(props)
+    validateAddIncantationProps(props)
 
     WorldUpgradeData[props.Id] = props.WorldUpgradeData
     WorldUpgradeData[props.Id].Name = props.Id
@@ -100,21 +147,23 @@ end
 
 -- Code to hook into the HelpText file, to add the text name/descriptions of the incantations
 -- This is the reason that addIncantation must be called at the start of the game - this is only read once, shortly after the game loads
-local helpTextFile = rom.path.combine(rom.paths.Content(), "Game/Text/en/HelpText.en.sjson")
-SJSON.hook(helpTextFile, function(data)
-	for _, incantation in pairs(addedIncantations) do
-		table.insert(data.Texts, SJSON.to_object({
-            Id = incantation.Id,
-            DisplayName = incantation.Name,
-            Description = incantation.Description,
-        }, { "Id", "DisplayName", "Description"}))
-        table.insert(data.Texts, SJSON.to_object({
-            Id = incantation.Id .. "_Flavor",
-            Description = incantation.FlavorText,
-        }, { "Id", "Description"}))
-	end
-    helpTextFileHasBeenLoaded = true
-end)
+for lang, _ in pairs(languageCodes) do
+    local helpTextFile = rom.path.combine(rom.paths.Content(), "Game/Text/" .. lang .. "/HelpText." .. lang .. ".sjson")
+    SJSON.hook(helpTextFile, function(data)
+        for _, incantation in pairs(addedIncantations) do
+            table.insert(data.Texts, SJSON.to_object({
+                Id = incantation.Id,
+                DisplayName = incantation.Name[lang] or incantation.Name["en"] or incantation.Name,
+                Description = incantation.Description[lang] or incantation.Description["en"] or incantation.Description,
+            }, { "Id", "DisplayName", "Description"}))
+            table.insert(data.Texts, SJSON.to_object({
+                Id = incantation.Id .. "_Flavor",
+                Description = incantation.FlavorText[lang] or incantation.FlavorText["en"] or incantation.FlavorText,
+            }, { "Id", "Description"}))
+        end
+        helpTextFileHasBeenLoaded = true
+    end)
+end
 
 ModUtil.once_loaded.game(function()
     -- Call OnEnabled when an incantation is purchased
