@@ -1,3 +1,7 @@
+if not Config.IncantationsEnabled.Aphrodite then
+    return
+end
+
 -- Logic
 local characterNames = {
     "Aphrodite", "Dora", "Narcissus", "Echo", "Hecate", "Artemis", "Demeter", 

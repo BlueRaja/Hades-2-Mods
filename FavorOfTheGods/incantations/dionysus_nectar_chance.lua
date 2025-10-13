@@ -1,3 +1,7 @@
+if not Config.IncantationsEnabled.Dionysus then
+    return
+end
+
 -- Logic
 local nectarChance = 0.05
 ModUtil.mod.Path.Wrap("AddResource", function(base, name, amount, source, args)

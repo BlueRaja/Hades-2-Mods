@@ -1,3 +1,7 @@
+if not Config.IncantationsEnabled.Arachne then
+    return
+end
+
 -- Logic
 local armorBonus = 10
 

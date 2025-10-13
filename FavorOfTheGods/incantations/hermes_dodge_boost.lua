@@ -1,3 +1,7 @@
+if not Config.IncantationsEnabled.Hermes then
+    return
+end
+
 -- Logic
 local function enableHermesDodgeBoost()
     OverwriteTableKeys(TraitData, {

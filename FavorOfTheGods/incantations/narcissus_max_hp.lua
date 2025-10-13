@@ -1,3 +1,7 @@
+if not Config.IncantationsEnabled.Narcissus then
+    return
+end
+
 -- Logic
 local function getTotalDamageTaken()
     local total = 0

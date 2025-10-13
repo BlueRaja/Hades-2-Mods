@@ -1,3 +1,7 @@
+if not Config.IncantationsEnabled.Demeter then
+    return
+end
+
 -- Logic
 local function getMultiplier()
     if Incantations.isIncantationEnabled("BlueRaja-MorePlants3") then

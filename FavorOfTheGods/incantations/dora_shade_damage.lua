@@ -1,3 +1,7 @@
+if not Config.IncantationsEnabled.Dora then
+    return
+end
+
 -- Logic
 local damageMultiplier = 1.5
 

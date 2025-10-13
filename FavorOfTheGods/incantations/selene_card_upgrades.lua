@@ -1,3 +1,7 @@
+if not Config.IncantationsEnabled.Selene then
+    return
+end
+
 -- Logic
 local function increaseSpellUpgradeChoices()
     if ConsumableData.TalentDrop and ConsumableData.TalentDrop.AddTalentPoints then

@@ -1,3 +1,7 @@
+if not Config.IncantationsEnabled.Circe then
+    return
+end
+
 -- Logic
 function enableCirceFamiliarMinigames()
     -- Set properties on each familiar if not already set

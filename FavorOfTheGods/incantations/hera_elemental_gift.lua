@@ -1,3 +1,7 @@
+if not Config.IncantationsEnabled.Hera then
+    return
+end
+
 -- Logic
 ModUtil.mod.Path.Wrap("UpdateHeroTraitDictionary", function(base)
     local result = base()

@@ -1,3 +1,7 @@
+if not Config.IncantationsEnabled.Charon then
+    return
+end
+
 -- Logic
 local moneyDropChance = 0.2
 local function enableCharonGoldDrops()

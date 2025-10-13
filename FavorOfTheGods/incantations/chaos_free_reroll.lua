@@ -1,3 +1,7 @@
+if not Config.IncantationsEnabled.Chaos then
+    return
+end
+
 -- Logic
 function giveFreeReroll(source)
     if not CurrentRun.ChaosFreeRerollsUsed then

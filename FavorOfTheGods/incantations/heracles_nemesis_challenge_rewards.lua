@@ -1,3 +1,7 @@
+if not Config.IncantationsEnabled.Heracles then
+    return
+end
+
 -- Logic for Heracles Challenge Reward Increase
 local rewardMultiplier = 1.5
 

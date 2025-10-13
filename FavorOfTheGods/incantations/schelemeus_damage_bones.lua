@@ -1,3 +1,7 @@
+if not Config.IncantationsEnabled.Schelemeus then
+    return
+end
+
 -- Logic
 local damagePerBoneBag = 7500
 local bonesPerBag = 5

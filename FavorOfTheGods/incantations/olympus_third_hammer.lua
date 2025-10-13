@@ -1,3 +1,7 @@
+if not Config.IncantationsEnabled.Olympus then
+    return
+end
+
 -- Logic
 local function enableOlympusThirdHammer()
     -- Allow early hammer upgrade if you've found less than 2 hammers

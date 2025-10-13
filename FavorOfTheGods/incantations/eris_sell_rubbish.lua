@@ -1,3 +1,7 @@
+if not Config.IncantationsEnabled.Eris then
+    return
+end
+
 -- Logic
 local function allowRubbishToBeSold()
     if ScreenData.MarketScreen and ScreenData.MarketScreen.ItemCategories then

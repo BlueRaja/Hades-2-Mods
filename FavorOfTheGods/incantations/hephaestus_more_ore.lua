@@ -1,3 +1,7 @@
+if not Config.IncantationsEnabled.Hephaestus then
+    return
+end
+
 -- Logic
 local function getMultiplier()
     if Incantations.isIncantationEnabled("BlueRaja-Hephaestus-More-Ore-3") then

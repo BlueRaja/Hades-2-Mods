@@ -1,3 +1,7 @@
+if not Config.IncantationsEnabled.Echo then
+    return
+end
+
 -- Logic
 local function enableEchoShopRespawn()
     -- Add our custom trait to TraitData

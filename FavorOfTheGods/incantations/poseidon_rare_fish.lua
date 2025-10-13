@@ -1,3 +1,7 @@
+if not Config.IncantationsEnabled.Poseidon then
+    return
+end
+
 -- Logic
 local function enhanceRareFishChances()
     -- Modify fish weights in all biomes to make rare and legendary fish more common
