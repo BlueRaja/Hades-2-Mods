@@ -6,29 +6,29 @@ I tried to keep them balanced, while still making them feel worthwhile.
 
 ## New Incantations added
 
-* Aphrodite: 25% chance to not spend a nectar
-* Arachne: Costumes have +10 armor
-* Artemis: More likely to appear
-* Athena: More likely to appear
-* Charon: Enemies more likely to drop gold
-* Chaos: Get one free temporary reroll for each god
-* Circe: All familiars skip all minigames
-* Demeter: Gain extra plants (multiple upgrades purchasable)
-* Dionysus: Small chance to gain more nectar on every pickup
-* Dora: Shades deal more damage
-* Echo: One item at Charon's shop respawns
-* Eris: Sell rubbish for bones
-* Hera: Start with one of each element
-* Hephaestus: Gain extra ore (multiple upgrades purchasable)
-* Heracles: Increased gold from Heracles
-* Hermes: Increases dodge chance by 5%
-* Icarus: More likely to appear
-* Narcissus: Gain 1 max HP when you beat a room without taking damage
-* Nemesis: Increased gold from Nemesis
-* Olympus: ??? (It's a secret!)
-* Poseidon: More rare fish
-* Schelemeus: Gain 5 bones for every 7500 damage dealt
-* Selene: More "Path of the Stars" points
+* **Aphrodite**: 25% chance to not spend a nectar
+* **Arachne**: Costumes have +10 armor
+* **Artemis**: More likely to appear
+* **Athena**: More likely to appear
+* **Charon**: Enemies more likely to drop gold
+* **Chaos**: Get one free temporary reroll for each god
+* **Circe**: All familiars skip all minigames
+* **Demeter**: Gain extra plants (multiple upgrades purchasable)
+* **Dionysus**: Small chance to gain more nectar on every pickup
+* **Dora**: Shades deal more damage
+* **Echo**: One item at Charon's shop respawns
+* **Eris**: Sell rubbish for bones
+* **Hera**: Start with one of each element
+* **Hephaestus**: Gain extra ore (multiple upgrades purchasable)
+* **Heracles**: Increased gold from Heracles
+* **Hermes**: Increases dodge chance by 5%
+* **Icarus**: More likely to appear
+* **Narcissus**: Gain 1 max HP when you beat a room without taking damage
+* **Nemesis**: Increased gold from Nemesis
+* **Olympus**: ??? (It's a secret!)
+* **Poseidon**: More rare fish
+* **Schelemeus**: Gain 5 bones for every 7500 damage dealt
+* **Selene**: More "Path of the Stars" points
 
 Each of these requires enough hearts with the god mentioned. Some also require having other abilities or story checkpoints unlocked.
 
@@ -57,3 +57,7 @@ You can turn off any of the incantations in the config, `ReturnOfModding/config/
 ### Your translations are terrible
 
 Yes, sorry, I used AI for the text translations. It may surprise you to learn that I do not speak 15 different languages.
+
+### I've found a bug
+
+Please submit bugs on [Github](https://github.com/BlueRaja/Hades-2-Mods/issues/new) or [Nexus Mods](https://www.nexusmods.com/hades2/mods/87?tab=bugs).
