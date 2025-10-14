@@ -27,7 +27,7 @@ Parameters:
 
 ### `Incantations.addIncantation(params)`
 
-Adds a new incantation. This method _must_ be called at the start of the time, ie. in `ready.lua` or inside a `ModUtil.once_loaded.game()` call.
+Adds a new incantation. This method _must_ be called at the start of the game, ie. in `ready.lua` or inside a `ModUtil.once_loaded.game()` call.
 
 Parameters:
 
@@ -165,3 +165,5 @@ Incantations.addIncantation({
 })
 ```
 ![Example image](https://i.imgur.com/hpGZKgv.png)
+
+You can also find lots of examples in my other mod, [Favor of the Gods](https://github.com/BlueRaja/Hades-2-Mods/tree/main/FavorOfTheGods/incantations)
