@@ -41,7 +41,7 @@ Parameters:
     * `{$Keywords.CharArachne}` - Will display "Arachne" in a special color, along with a box along the side explaining who that is. You should use `{$Keywords.Char` sequences whenever you reference a character in the description. There are also ones for locations, eg. `{$Keywords.WellShop}` will display "Well of Charon" + the help box.
   * `FlavorText` (string|table) **(required)** - The flavor text shown in italics below the description when hovering over the incantation in the cauldron. Can be either a constant string or a translation table _(see below)_.
   * `WorldUpgradeData` (table) **(required)** - The information about the incantation, in the same format as the entries in `WorldUpgradeData.lua`. This includes cost, requirements, icon, voice lines, etc. _(see below)_.
-  * `OnEnabled` (function) **(optional)** - A function to be called when the incantation is enabled, it when the incantation is first purchased, and also whenever the save file is loaded. The function passed in can optionally take two parameters, in this order:
+  * `OnEnabled` (function) **(optional)** - A function to be called when the incantation is enabled, which happens when the incantation is first purchased, and also whenever the save file is loaded. The function passed in can optionally take two parameters, in this order:
     * `source` (string, either "load" or "purchase") - Whether the function is being called due to a save file loading (`"load"`) or the incantation being purchased (`"purchase"`).
     * `incantationId` (string) - The ID of the incantation being enabled.
 
