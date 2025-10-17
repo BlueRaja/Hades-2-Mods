@@ -4,9 +4,9 @@ end
 
 -- Logic
 local function enableEchoShopRespawn()
-    -- Add our custom trait to TraitData
     OverwriteTableKeys(TraitData, {
         BlueRajaEchoShopRespawn = {
+            Name = "BlueRajaEchoShopRespawn",
             Icon = "Boon_Echo_08",
             InheritFrom = { "BaseTrait" },
             RarityLevels = {
@@ -24,7 +24,6 @@ local function enableEchoShopRespawn()
                     Format = "Percent",
                 },
             },
-            TraitName = "BlueRajaEchoShopRespawn",
         }
     })
 end

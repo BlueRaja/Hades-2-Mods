@@ -6,6 +6,7 @@ end
 local function enableHermesDodgeBoost()
     OverwriteTableKeys(TraitData, {
         BlueRajaHermesDodgeBoost = {
+            Name = "BlueRajaHermesDodgeBoost",
             Icon = "Boon_Hermes_35",
             InheritFrom = { "BaseTrait" },
             PropertyChanges = {
