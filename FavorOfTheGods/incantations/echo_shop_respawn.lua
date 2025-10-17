@@ -39,6 +39,16 @@ SJSON.hook(traitTextFile, function(data)
     }, { "Id", "InheritFrom", "DisplayName", "Description"}))
 end)
 
+local function isCharonShop()
+    if not CurrentRun or not CurrentRun.CurrentRoom then
+        return false
+    end
+    
+    -- Check if room name matches shop pattern (F_Shop01, I_PreBoss02, etc.)
+    local roomName = CurrentRun.CurrentRoom.Name
+    return roomName and (string.match(roomName, "_Shop%d+$") or string.match(roomName, "_PreBoss%d+$"))
+end
+
 -- Hook into RemoveStoreItem to remove the trait after it's used
 ModUtil.mod.Path.Wrap("RemoveStoreItem", function(base, args)
     local result = base(args)
@@ -46,6 +56,7 @@ ModUtil.mod.Path.Wrap("RemoveStoreItem", function(base, args)
     -- Check if our incantation is enabled and we have the trait
     if Incantations.isIncantationEnabled("BlueRaja-Echo-Shop-Respawn") and 
        HeroHasTrait("BlueRajaEchoShopRespawn") and
+       isCharonShop() and
        args and args.Name ~= "SpellDrop" then
         
         printMsg("[Echo] Respawned item, removing respawn trait")
