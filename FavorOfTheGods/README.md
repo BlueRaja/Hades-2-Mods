@@ -7,6 +7,7 @@ I tried to keep them balanced, while still making them feel worthwhile.
 ## New Incantations added
 
 * **Aphrodite**: 25% chance to not spend a nectar
+* **Apollo**: Cast circle grows by 20%
 * **Arachne**: Costumes have +10 armor
 * **Artemis**: More likely to appear
 * **Athena**: More likely to appear
@@ -18,6 +19,7 @@ I tried to keep them balanced, while still making them feel worthwhile.
 * **Dora**: Shades deal more damage
 * **Echo**: One item at Charon's shop respawns
 * **Eris**: Sell rubbish for bones
+* **Hecate**: Start with +20 magick
 * **Hera**: Start with one of each element
 * **Hephaestus**: Gain extra ore (multiple upgrades purchasable)
 * **Heracles**: Increased gold from Heracles
@@ -29,6 +31,7 @@ I tried to keep them balanced, while still making them feel worthwhile.
 * **Poseidon**: More rare fish
 * **Schelemeus**: Gain 5 bones for every 7500 damage dealt
 * **Selene**: More "Path of the Stars" points
+* **Zeus**: Olympus damage effects increased by 10%
 
 Each of these requires enough hearts with the god mentioned. Some also require having other abilities or story checkpoints unlocked.
 
