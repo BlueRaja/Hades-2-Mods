@@ -22,6 +22,7 @@ function isDuringRun()
     return CurrentHubRoom == nil
 end
 
+import "incantations/apollo_cast_circle_size.lua"
 import "incantations/aphrodite_nectar_refund.lua"
 import "incantations/arachne_armor_boost.lua"
 import "incantations/circe_familiar_minigames.lua"
@@ -33,6 +34,7 @@ import "incantations/dora_shade_damage.lua"
 import "incantations/echo_shop_respawn.lua"
 import "incantations/eris_sell_rubbish.lua"
 import "incantations/god_encounter_boosts.lua"
+import "incantations/hecate_starting_mana.lua"
 import "incantations/hephaestus_more_ore.lua"
 import "incantations/hera_elemental_gift.lua"
 import "incantations/heracles_nemesis_challenge_rewards.lua"
@@ -42,3 +44,4 @@ import "incantations/olympus_third_hammer.lua"
 import "incantations/poseidon_rare_fish.lua"
 import "incantations/schelemeus_damage_bones.lua"
 import "incantations/selene_card_upgrades.lua"
+import "incantations/zeus_olympian_damage_boost.lua"

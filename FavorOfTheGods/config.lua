@@ -1,6 +1,7 @@
 local config = {
     Enabled = true,
     IncantationsEnabled = {
+        Apollo = true,
         Aphrodite = true,
         Arachne = true,
         Artemis = true,
@@ -13,6 +14,7 @@ local config = {
         Dora = true,
         Echo = true,
         Eris = true,
+        Hecate = true,
         Hera = true,
         Hephaestus = true,
         Heracles = true,
@@ -24,12 +26,14 @@ local config = {
         Poseidon = true,
         Schelemeus = true,
         Selene = true,
+        Zeus = true,
     },
 }
 
 local description = {
     Enabled = "If false, the mod does nothing",
     IncantationsEnabled = {
+        Apollo = "Enable Apollo's cast circle size incantation",
         Aphrodite = "Enable Aphrodite's nectar refund incantation",
         Arachne = "Enable Arachne's armor boost incantation",
         Artemis = "Enable Artemis' encounter boost incantation",
@@ -42,6 +46,7 @@ local description = {
         Dora = "Enable Dora's shade damage incantation",
         Echo = "Enable Echo's shop respawn incantation",
         Eris = "Enable Eris' rubbish selling incantation",
+        Hecate = "Enable Hecate's starting mana incantation",
         Hera = "Enable Hera's elemental gift incantation",
         Hephaestus = "Enable Hephaestus' ore harvest incantations",
         Heracles = "Enable Heracles' challenge reward incantation",
@@ -53,6 +58,7 @@ local description = {
         Poseidon = "Enable Poseidon's rare fish incantation",
         Schelemeus = "Enable Schelemeus' damage bones incantation",
         Selene = "Enable Selene's card upgrades incantation",
+        Zeus = "Enable Zeus' Olympian damage boost incantation",
     },
 }
 
