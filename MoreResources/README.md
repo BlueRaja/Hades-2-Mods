@@ -1,3 +1,5 @@
+**Also check out my other mod [Favor of the Gods](https://thunderstore.io/c/hades-ii/p/BlueRaja/FavorOfTheGods/), which gives increased resources in a more immersive way.**
+
 # More Resources
 
 Increases resources gained from most sources.

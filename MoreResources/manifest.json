@@ -2,7 +2,7 @@
   "namespace": "BlueRaja",
   "name": "MoreResourcePickups",
   "description": "Increase some resource pickups",
-  "version_number": "1.2.3",
+  "version_number": "1.2.4",
   "dependencies": [
     "Hell2Modding-Hell2Modding-1.0.63",
     "LuaENVY-ENVY-1.2.0",
