@@ -28,7 +28,7 @@ ModUtil.mod.Path.Wrap("SpendResource", function(base, name, amount, source, args
     
     if Incantations.isIncantationEnabled("BlueRaja-Aphrodite-Nectar-Refund") then
         -- Check if GiftPoints (Nectar) are being spent on a relationship
-        if name == "GiftPoints" and amount == 1 and source ~= "BlueRajaAphroditeRefund" and isCharacterGift(source) and RandomChance(1) then
+        if name == "GiftPoints" and amount == 1 and source ~= "BlueRajaAphroditeRefund" and isCharacterGift(source) and RandomChance(0.25) then
             wait(0.66)
             AddResource("GiftPoints", 1, "BlueRajaAphroditeRefund")
             printMsg("[Aphrodite] Refunded 1 Nectar")
