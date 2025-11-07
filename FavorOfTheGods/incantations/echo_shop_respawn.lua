@@ -80,6 +80,16 @@ ModUtil.mod.Path.Wrap("StartNewRun", function(base, prevRun, args)
     return result
 end)
 
+-- BUGFIX: Remove trait when Travel Deal boon is picked up
+ModUtil.mod.Path.Wrap("AddTraitToHero", function(base, args)
+    if args.TraitData and args.TraitData.Name == "RestockBoon" and HeroHasTrait("BlueRajaEchoShopRespawn") then
+        printMsg("[Echo] Hero got 'Travel Deal' boon. Removing 'Favor of Echo' boon because they conflict.")
+        RemoveTrait(CurrentRun.Hero, "BlueRajaEchoShopRespawn")
+    end
+    
+    return base(args)
+end)
+
 -- Incantation
 Incantations.addIncantation({
     Id = "BlueRaja-Echo-Shop-Respawn",
