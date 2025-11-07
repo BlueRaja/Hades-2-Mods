@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1] - 2025-11-07
+
+- [Aphrodite] BUGFIX: Nectar is refunded too often
+- [Echo] BUGFIX: Prices are too high when Travel Deal boon is obtained
+- [Zeus] BUGFIX: Damage multiplier not working
+- [Zues] BUGFIX: Incantation gives an extra fire element
+
 ## [2.0.0] - 2025-11-05
 
 - Added incantations for Apollo, Hecete, and Zeus
