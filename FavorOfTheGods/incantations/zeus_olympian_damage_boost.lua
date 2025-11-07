@@ -9,24 +9,17 @@ local function enableZeusOlympianDamageBoost()
         BlueRajaZeusOlympianDamageBoost = {
             Name = "BlueRajaZeusOlympianDamageBoost",
             Icon = "Boon_Zeus_48",
-            InheritFrom = { "BaseTrait", "FireBoon" },
+            InheritFrom = { "BaseTrait" },
             AddOutgoingDamageModifiersArray = {
                 {
                     ValidProjectiles = WeaponSets.OlympianProjectileNames,
-                    DamageMultiplier = {
-                        BaseValue = damageMultiplier,
-                        SourceIsMultiplier = true,
-                    },
-                    __Multiplier = damageMultiplier,
+                    ValidWeaponMultiplier = damageMultiplier,
                     __Threshold = 1,
-                    ReportValues = { ReportedMultiplier = "__Multiplier", ReportedThreshold = "__Threshold" }
+                    ReportValues = { ReportedMultiplier = "ValidWeaponMultiplier", ReportedThreshold = "__Threshold"}
                 },
                 {
                     ValidEffects = WeaponSets.OlympianEffectNames,
-                    DamageMultiplier = {
-                        BaseValue = damageMultiplier,
-                        SourceIsMultiplier = true,
-                    },
+                    ValidWeaponMultiplier = damageMultiplier,
                 }
             },
             StatLines =
