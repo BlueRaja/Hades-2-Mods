@@ -2,7 +2,7 @@ if not Config.IncantationsEnabled.Odysseus then
     return
 end
 
-local bonusChance = 0.25
+local bonusChance = 0.50
 
 local function getEligibleKeepsakes(currentKeepsake)
     local eligibleKeepsakes = {}
@@ -30,6 +30,9 @@ local function GetIncrementAmount()
     return 1
 end
 
+-- Note: Due to a bug with ModUtil, this callback will be called twice if the player also has the "Keepsake Chambers" mod
+-- The result is that their keepsakes level up slightly faster. I'm not including any hacky workarounds because
+-- the other mod increases the rate of keepsake leveling anyway.
 ModUtil.mod.Path.Wrap("AdvanceKeepsake", function(base, fromTrait)
     local result = base(fromTrait)
     if Incantations.isIncantationEnabled("BlueRaja-Odysseus-Keepsake-Progress") and not fromTrait then
@@ -41,9 +44,9 @@ ModUtil.mod.Path.Wrap("AdvanceKeepsake", function(base, fromTrait)
                 local incrementAmount = GetIncrementAmount()
                 IncrementTableValue(GameState.KeepsakeChambers, randomKeepsake, incrementAmount)
                 printMsg("[Odysseus] Added " .. incrementAmount .. " room completion(s) to keepsake: " .. randomKeepsake)
+            else
+                printMsg("[Odysseus] No eligible keepsakes found")
             end
-        else
-            printMsg("[Odysseus] No eligible keepsakes found")
         end
     end
     
@@ -71,21 +74,21 @@ Incantations.addIncantation({
         ["zh-TW"] = "奧德修斯的恩惠",
     },
     Description = {
-        en = "When you finish a room and progress a keepsake, {#Emph}25% chance {#Prev}to also progress a random other keepsake.",
-        de = "Wenn du einen Raum abschließt und einen Talisman voranbringst, {#Emph}25% Chance {#Prev}, auch einen zufälligen anderen Talisman voranzubringen.",
-        el = "Όταν ολοκληρώνεις ένα δωμάτιο και προχωράς ένα τάλισμαν, {#Emph}25% πιθανότητα {#Prev}να προχωρήσεις και ένα άλλο τυχαίο τάλισμαν.",
-        es = "Cuando terminas una habitación y avanzas un talismán, {#Emph}25% de probabilidad {#Prev}de avanzar también otro talismán aleatorio.",
-        fr = "Lorsque vous terminez une salle et progressez un talisman, {#Emph}25% de chance {#Prev}de progresser également un autre talisman aléatoire.",
-        it = "Quando completi una stanza e fai progredire un talismano, {#Emph}25% di probabilità {#Prev}di far progredire anche un altro talismano casuale.",
-        ja = "部屋をクリアしてタリスマンを進めた時、{#Emph}25%の確率{#Prev}で別のランダムなタリスマンも進む。",
-        ko = "방을 완료하고 탈리스만을 진행할 때, {#Emph}25% 확률{#Prev}로 다른 무작위 탈리스만도 진행한다.",
-        pl = "Gdy kończysz pokój i postępujesz talizman, {#Emph}25% szansy {#Prev}na postęp również innego losowego talizmanu.",
-        ["pt-BR"] = "Quando você termina uma sala e progride um talismã, {#Emph}25% de chance {#Prev}de também progredir outro talismã aleatório.",
-        ru = "Когда вы завершаете комнату и продвигаете талисман, {#Emph}25% шанс {#Prev}также продвинуть другой случайный талисман.",
+        en = "When you finish a room and progress a keepsake, {#Emph}50% chance {#Prev}to also progress a random other keepsake.",
+        de = "Wenn du einen Raum abschließt und einen Talisman voranbringst, {#Emph}50% Chance {#Prev}, auch einen zufälligen anderen Talisman voranzubringen.",
+        el = "Όταν ολοκληρώνεις ένα δωμάτιο και προχωράς ένα τάλισμαν, {#Emph}50% πιθανότητα {#Prev}να προχωρήσεις και ένα άλλο τυχαίο τάλισμαν.",
+        es = "Cuando terminas una habitación y avanzas un talismán, {#Emph}50% de probabilidad {#Prev}de avanzar también otro talismán aleatorio.",
+        fr = "Lorsque vous terminez une salle et progressez un talisman, {#Emph}50% de chance {#Prev}de progresser également un autre talisman aléatoire.",
+        it = "Quando completi una stanza e fai progredire un talismano, {#Emph}50% di probabilità {#Prev}di far progredire anche un altro talismano casuale.",
+        ja = "部屋をクリアしてタリスマンを進めた時、{#Emph}50%の確率{#Prev}で別のランダムなタリスマンも進む。",
+        ko = "방을 완료하고 탈리스만을 진행할 때, {#Emph}50% 확률{#Prev}로 다른 무작위 탈리스만도 진행한다.",
+        pl = "Gdy kończysz pokój i postępujesz talizman, {#Emph}50% szansy {#Prev}na postęp również innego losowego talizmanu.",
+        ["pt-BR"] = "Quando você termina uma sala e progride um talismã, {#Emph}50% de chance {#Prev}de também progredir outro talismã aleatório.",
+        ru = "Когда вы завершаете комнату и продвигаете талисман, {#Emph}50% шанс {#Prev}также продвинуть другой случайный талисман.",
         tr = "Bir odayı bitirip bir tılsım ilerlettiğinizde, {#Emph}%25 şans{#Prev} başka rastgele bir tılsımı da ilerletmek.",
-        uk = "Коли ви завершуєте кімнату і просуваєте талісман, {#Emph}25% шанс {#Prev}також просунути інший випадковий талісман.",
-        ["zh-CN"] = "当你完成房间并推进护符时，{#Emph}25%概率{#Prev}也会推进另一个随机护符。",
-        ["zh-TW"] = "當你完成房間並推進護符時，{#Emph}25%機率{#Prev}也會推進另一個隨機護符。",
+        uk = "Коли ви завершуєте кімнату і просуваєте талісман, {#Emph}50% шанс {#Prev}також просунути інший випадковий талісман.",
+        ["zh-CN"] = "当你完成房间并推进护符时，{#Emph}50%概率{#Prev}也会推进另一个随机护符。",
+        ["zh-TW"] = "當你完成房間並推進護符時，{#Emph}50%機率{#Prev}也會推進另一個隨機護符。",
     },
     FlavorText = {
         en = "Odysseus shares his bounties with his crew, ensuring that all who serve are rewarded for their loyalty.",
