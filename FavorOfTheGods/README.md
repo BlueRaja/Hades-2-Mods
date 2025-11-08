@@ -1,6 +1,6 @@
 # Favor of the Gods
 
-Adds 20+ new incantations that are based on your relationships with the gods.
+Adds 30 new incantations that are based on your relationships with the gods.
 
 I tried to keep them balanced, while still making them feel worthwhile.
 
