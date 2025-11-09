@@ -1,5 +1,10 @@
 # Changelog
 
+## [3.0.0] - 2025-11-08
+
+- Added Odysseus incantation
+- [Selene] Improved description
+
 ## [2.0.1] - 2025-11-07
 
 - [Aphrodite] BUGFIX: Nectar is refunded too often

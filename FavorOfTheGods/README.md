@@ -1,6 +1,6 @@
 # Favor of the Gods
 
-Adds 30 new incantations that are based on your relationships with the gods.
+Adds 30+ new incantations that are based on your relationships with the gods.
 
 I tried to keep them balanced, while still making them feel worthwhile.
 
@@ -27,6 +27,7 @@ I tried to keep them balanced, while still making them feel worthwhile.
 * **Icarus**: More likely to appear
 * **Narcissus**: Gain 1 max HP when you beat a room without taking damage
 * **Nemesis**: Increased gold from Nemesis
+* **Odysseus**: 50% chance for each room to count towards a second keepsake
 * **Olympus**: ??? (It's a secret!)
 * **Poseidon**: More rare fish
 * **Schelemeus**: Gain 5 bones for every 7500 damage dealt
