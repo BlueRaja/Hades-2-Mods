@@ -1,5 +1,9 @@
 # Changelog
 
+## [3.0.1] - 2025-11-17
+
+- [Hera] BUGFIX: Tall Order boon not taking into account the extra element
+
 ## [3.0.0] - 2025-11-08
 
 - Added Odysseus incantation
