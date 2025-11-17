@@ -15,6 +15,7 @@ ModUtil.mod.Path.Wrap("UpdateHeroTraitDictionary", function(base)
             CurrentRun.Hero.Elements.Earth = (CurrentRun.Hero.Elements.Earth or 0) + 1
             CurrentRun.Hero.Elements.Fire = (CurrentRun.Hero.Elements.Fire or 0) + 1
             CurrentRun.Hero.Elements.Water = (CurrentRun.Hero.Elements.Water or 0) + 1
+            CurrentRun.Hero.HighestBaseElementCount = (CurrentRun.Hero.HighestBaseElementCount or 0) + 1
             printMsg("[Hera] Gave elemental gifts")
         end
     end
