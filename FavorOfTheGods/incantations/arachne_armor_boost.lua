@@ -5,20 +5,42 @@ end
 -- Logic
 local armorBonus = 10
 
+-- BaseAmount may be a number or a value-ramp table; see TraitData_Arachne.lua
+local function addBonusToCostumeArmorBaseAmount(args)
+    if not args or args.BaseAmount == nil then
+        return
+    end
+    local baseAmount = args.BaseAmount
+    if type(baseAmount) == "number" then
+        args.BaseAmount = baseAmount + armorBonus
+    elseif type(baseAmount) == "table" then
+        if baseAmount.BaseValue ~= nil then
+            baseAmount.BaseValue = baseAmount.BaseValue + armorBonus
+        elseif baseAmount.BaseMin ~= nil and baseAmount.BaseMax ~= nil then
+            baseAmount.BaseMin = baseAmount.BaseMin + armorBonus
+            baseAmount.BaseMax = baseAmount.BaseMax + armorBonus
+        elseif baseAmount.BaseMin ~= nil then
+            baseAmount.BaseMin = baseAmount.BaseMin + armorBonus
+        elseif baseAmount.BaseMax ~= nil then
+            baseAmount.BaseMax = baseAmount.BaseMax + armorBonus
+        end
+    end
+end
+
 local function increaseArachneArmor()
     -- For each key in TraitData that ends in "Costume", find CostumeArmor setup functions and increase BaseAmount by armorBonus
     for traitName, traitData in pairs(TraitData) do
         if string.find(traitName, "Costume$") then
             -- Check if it has SetupFunction with CostumeArmor
             if traitData.SetupFunction and traitData.SetupFunction.Name == "CostumeArmor" and traitData.SetupFunction.Args then
-                traitData.SetupFunction.Args.BaseAmount = (traitData.SetupFunction.Args.BaseAmount or 0) + armorBonus
+                addBonusToCostumeArmorBaseAmount(traitData.SetupFunction.Args)
             end
-            
+
             -- Check if it has SetupFunctions array with CostumeArmor
             if traitData.SetupFunctions then
                 for i, setupFunction in pairs(traitData.SetupFunctions) do
                     if setupFunction and setupFunction.Name == "CostumeArmor" and setupFunction.Args then
-                        setupFunction.Args.BaseAmount = (setupFunction.Args.BaseAmount or 0) + armorBonus
+                        addBonusToCostumeArmorBaseAmount(setupFunction.Args)
                     end
                 end
             end
