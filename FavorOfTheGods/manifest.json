@@ -2,9 +2,9 @@
   "namespace": "BlueRaja",
   "name": "FavorOfTheGods",
   "description": "Adds 30+ new incantations that are based on your relationship with the gods",
-  "version_number": "3.0.1",
+  "version_number": "4.0.0",
   "dependencies": [
-    "Hell2Modding-Hell2Modding-1.0.63",
+    "Hell2Modding-Hell2Modding-1.0.91",
     "LuaENVY-ENVY-1.2.0",
     "SGG_Modding-Chalk-2.1.1",
     "SGG_Modding-ENVY-1.2.0",

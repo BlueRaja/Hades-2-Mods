@@ -1,5 +1,9 @@
 # Changelog
 
+## [4.0.0] - 2026-04-15
+
+- [Arachne] BUGFIX: Crashes under Post Launch Patch 2
+
 ## [3.0.1] - 2025-11-17
 
 - [Hera] BUGFIX: Tall Order boon not taking into account the extra element
